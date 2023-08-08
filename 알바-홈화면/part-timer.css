@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.내용 {
+    margin: 10px;
+}
+
+.app-title {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    padding: 25px;
+    background-color: #635BFF;
+    color: #ffffff;
+}
+
+.app-title:hover {
+    color: black;
+}
+
+.greeting {
+    text-align: left;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    padding: 5px;
+}
+
+/*달력*/
+.calendar {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 60px;
+    background-color: #ffffff;
+    height: 150px;
+    font-size: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 1fr repeat(6, 1fr);
+    grid-template-rows: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.month {
+    grid-column: 4;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.day {
+    grid-row: 2;
+    border-bottom: 3px solid #ddd;
+}
+
+/*사업장 선택*/
+.출퇴근 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.label-arrow {
+    display: flex;
+    align-items: center;
+}
+
+select {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 25px;
+    width: 150px;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*실시간 근무 현황*/
+.실시간-근무-현황 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    position: relative;
+}
+
+.dot {
+    width: 180px;
+    height: 180px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    border: 10px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.line {
+    width: calc(100% - 220px);
+    height: 20px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 110px;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+
+/*급여,근무,선지급 박스*/
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 70px;
+    padding: 30px;
+}
+
+.work-box,
+.money-box {
+    border-radius: 70px;
+    background-color: #ffffff;
+    padding: 170px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s
+}
+
+.work-box:hover,
+.money-box:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+
+.money-box .icon i {
+    font-size: 160px;
+    color: rgb(236, 201, 5);
+    position: absolute;
+    top: 135px;
+    left: 70px;
+    transition: transform 0.3s, box-shadow 0.3s
+}
+
+.work-box .icon i {
+    font-size: 160px;
+    color: rgb(204, 44, 44);
+    position: absolute;
+    top: 135px;
+    left: 70px;
+    transition: transform 0.3s, box-shadow 0.3s
+}
+
+.money-box .icon i:hover,
+.work-box .icon i:hover {
+    opacity: 0.8;
+}
+
+.money-box .text,
+.work-box .text {
+    position: absolute;
+    top: 3px;
+    left: 70px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.선지급 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 30px;
+}
+
+.선지급-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    background-color: #ffffff;
+    padding: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s
+}
+
+.선지급-box:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.선지급-box .text {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media all and (max-width: 600px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+}
