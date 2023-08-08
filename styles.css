@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.내용 {
+    margin: 10px;
+}
+
+.app-title {
+    text-align: center;
+    font-size: 40px; 
+    font-weight: bold;
+    padding: 25px; 
+    background-color: #635BFF;
+    color: #ffffff;
+}
+
+.app-title:hover {
+    color: black;
+}
+
+.greeting {
+    text-align: left;
+    font-size: 30px; 
+    font-weight: bold;
+    margin-bottom: 20px; 
+    margin-left: 40px; 
+    padding: 5px; 
+}
+
+.work {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5px; 
+    margin-left: 25px; 
+    margin-right: 25px; 
+    border-radius: 40px; 
+    background-color: white;
+    padding: 20px; 
+    font-size: 20px; 
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.rounded-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.rounded-table td {
+    padding: 20px; 
+    text-align: center;
+}
+
+.rounded-table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+  
+.calendar {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 35px; 
+    margin-bottom: 20px; 
+    margin-left: 25px; 
+    margin-right: 25px; 
+    border-radius: 40px;
+    background-color: #ffffff;
+    height: 150px; 
+    font-size: 20px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 1fr repeat(6, 1fr);
+    grid-template-rows: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+  
+.month {
+    grid-column: 4;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.day {
+    grid-row: 2;
+    border-bottom: 3px solid #ddd;
+}
+
+
+  
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; 
+    padding: 30px; 
+}
+
+.work-box {
+    border-radius: 40px;
+    background-color: #ffffff;
+    padding: 150px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.money-box {
+    border-radius: 40px;
+    background-color: #ffffff;
+    padding: 150px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.money-box .icon i {
+    font-size: 130px;
+    color: rgb(236, 201, 5);
+    position: absolute;
+    top: 120px; 
+    left: 50px; 
+}
+
+.work-box .icon i {
+    font-size: 130px; 
+    color: rgb(204, 44, 44);
+    position: absolute;
+    top: 120px; 
+    left: 50px; 
+}
+
+.money-box .icon i:hover {
+    transform: scale(1.1);
+}
+
+.work-box .icon i:hover {
+    transform: scale(1.1);
+}
+
+.money-box {
+    position: relative;
+}
+
+.money-box .text {
+    position: absolute;
+    top: 8px;
+    left: 50px; 
+    font-size: 30px; 
+    font-weight: bold;
+}
+
+.work-box {
+    position: relative;
+}
+
+.work-box .text {
+    position: absolute;
+    top: 8px;
+    left: 50px; 
+    font-size: 30px; 
+    font-weight: bold;
+}
+
+@media all and (max-width: 600px) {
+    .main {
+        grid-template-columns: 1fr; 
+    }
+}
