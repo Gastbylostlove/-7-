@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.내용 {
+    margin: 10px;
+}
+
+.app-title {
+    text-align: CENTER;
+    font-size: 45px;
+    font-weight: bold;
+    padding: 25px;
+    background-color: #635BFF;
+    color: #ffffff;
+}
+
+.app-title:hover {
+    color: black;
+}
+
+body {
+    margin: 10;
+}
+
+
+/*인스타 스토리*/
+.container {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+ 
+    background-color: white;
+    padding: 1rem; 
+    width: 100%;
+}
+
+.story-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 5rem;
+    grid-gap: 1.2rem;
+}
+
+
+.story-container .content {
+    display: grid;
+    grid-gap: 0.5rem;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease-in;
+}
+
+
+.story-container .content .img-container {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background:
+        radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
+        radial-gradient(white 65%, transparent 0),
+        radial-gradient(to top right, orange, deeppink);
+}
+
+.story-container .content .img-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: circle(50%);
+}
+
+/* 근로자 유형 */
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 70px;
+    padding: 30px;
+}
+
+
+.근로자_유형 {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 60px;
+}
+.시급 {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 60px;
+}
+.insurance {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 60px;
+}
+.day_time {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 60px;
+}
+
+/* 보험 스위치 스타일 */
+
+.checkbox-1 .switch1,
+.checkbox-2 .switch2,
+.checkbox-3 .switch3,
+.checkbox-4 .switch4 {
+    display: grid;
+}
+
+.checkbox-1 .switch1 + label,
+.checkbox-2 .switch2 + label,
+.checkbox-3 .switch3 + label,
+.checkbox-4 .switch4 + label {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox-1 .switch1 + label::before,
+.checkbox-1 .switch1 + label::after,
+.checkbox-2 .switch2 + label::before,
+.checkbox-2 .switch2 + label::after,
+.checkbox-3 .switch3 + label::before,
+.checkbox-3 .switch3 + label::after,
+.checkbox-4 .switch4 + label::before,
+.checkbox-4 .switch4 + label::after{
+    content: '';
+    display: black;
+}
+
+.checkbox-1 .switch1 + label::before,
+.checkbox-2 .switch2 + label::before,
+.checkbox-3 .switch3 + label::before,
+.checkbox-4 .switch4 + label::before {
+    background-color: #05012c;
+    border-radius: 500px;
+    height: 15px;
+    margin-right: 8px;
+    -webkit-transition: background-color 0.125s ease-out;
+    transition: background-color 0.125s ease-out;
+    width: 25px;
+}
+
+.checkbox-1 .switch1 + label::after,
+.checkbox-2 .switch2 + label::after,
+.checkbox-3 .switch3 + label::after,
+.checkbox-4 .switch4 + label::after {
+    background-color: #fff;
+    border-radius: 13px;
+    box-shadow: 0 3px 1px 0 rgba(37, 34, 71, 0.05), 0 2px 2px 0 rgba(37, 34, 71, 0.1), 0 3px 3px 0 rgba(37, 34, 71, 0.05);
+    height: 13px;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    -webkit-transition: -webkit-transform 0.125s ease-out;
+    transition: -webkit-transform 0.125s ease-out;
+    transition: transform 0.125s ease-out;
+    transition: transform 0.125s ease-out, -webkit-transform 0.125s ease-out;
+    width: 13px;
+}
+
+
+
+.checkbox-1 .switch1:checked + label::before,
+.checkbox-2 .switch2:checked + label::before,
+.checkbox-3 .switch3:checked + label::before,
+.checkbox-4 .switch4:checked + label::before {
+    background-color: #ffb500;
+}
+
+.checkbox-1 .switch1:checked + label::after,
+.checkbox-2 .switch2:checked + label::after,
+.checkbox-3 .switch3:checked + label::after,
+.checkbox-4 .switch4:checked + label::after {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+}
+
+/* 저장버튼 */
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 70px;
+    padding: 30px;
+}
+
+
+.저장 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 60px;
+}
+
+.저장-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s
+}
+
+.저장-box:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.저장-box .text {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media all and (max-width: 600px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+}

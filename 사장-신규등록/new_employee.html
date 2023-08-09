@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>new_employee</title>
+    <link rel="stylesheet" href="new_employee.css" />
+  
+
+  <body>
+    <div class="app-title">S O H O</div>
+
+    <div class="내용">
+    <!-- 신규 등록 직원 프로필 사진 -->
+      <div class="container">
+        <div class="story-container">
+          <div class="content">
+            <div class="img-container">
+              <img
+                src="https://mblogthumb-phinf.pstatic.net/MjAxNzA4MjJfMjAy/MDAxNTAzMzU1NTMxNzM2.DvMPMvMm_rEJHf_RyZnRwcOV-D1TURoGFTBxf2Sa06Ag.bMt90weg1edrQ5a0GlulLX3f7Pu2-aPMQT-y083DO3cg.JPEG.doghter4our/IMG_0906.jpg?type=w800"
+                alt=""
+              />
+            </div>
+            <div class="text-container">nayong1</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 근로자 유형 체크 -->
+      <div class="근로자_유형">
+        <div class="text">근로자 유형</div>
+            <input type='radio' name='type' value='일용근로자' />일용근로자
+            <input type='radio' name='type' value='상시근로자' />상시근로자
+            <input type='radio' name='type' value='프리랜서' />프리랜서
+        </div>
+            <!-- 시급 입력 -->
+            <div class="시급">
+                <!-- <div class="text">시급</div> -->
+            <label for="bill">시급 </label>
+            <input type="number" id="bill"> 원
+            </div>
+      </div>      
+    
+
+    
+    <!-- 4대보험 체크박스-->
+    <div class="insurance">
+        <div class="text">4대보험</div>
+            <div class="checkbox-1">
+                <input class="switch1" type="checkbox" id="switch1" name="switch1" value="private">
+                <label for="switch1">
+                  <span class="switch-x-text">건강보험 </span>
+                </label>
+              </div>
+              <div class="checkbox-2">
+                <input class="switch2" type="checkbox" id="switch2" name="switch2" value="private">
+                <label for="switch2">
+                  <span class="switch-x-text">산재보험 </span>
+                </label>
+              </div>
+              <div class="checkbox-3">
+                <input class="switch3" type="checkbox" id="switch3" name="switch3" value="private">
+                <label for="switch3">
+                  <span class="switch-x-text">고용보험 </span>
+                </label>
+              </div>
+              <div class="checkbox-4">
+                <input class="switch4" type="checkbox" id="switch4" name="switch4" value="private">
+                <label for="switch4">
+                  <span class="switch-x-text">국민연금 </span>
+                </label>
+              </div>
+
+            <!-- 요일/시간   -->
+            <div class="day_time">
+                <div class="text">요일/시간</div>
+                <div class="select-box">
+                    <select id="business">
+                        <option value="월">월</option>
+                        <option value="화">화</option>
+                        <option value="수">수</option>
+                        <option value="목">목</option>
+                        <option value="금">금</option>
+                        <option value="토">토</option>
+                        <option value="일">일</option>
+                    </select>
+                </div>
+                <input type="time" min="09:00" max="18:00" required /> ~
+                <input type="time" min="09:00" max="18:00" required />
+                <!-- 요일 추가하기 -->
+            
+
+            <!-- 저장 버튼 -->
+            <div class="저장">
+                <div class="저장-box">
+                    <div class="text">
+                        <p>저장</p>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    
+                
+              
+            </div>
+            
+              
+              
+    </div>
+
+
+
+      
+    </div>
+  </body>
+</html>
