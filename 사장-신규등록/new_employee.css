@@ -4,7 +4,7 @@ body {
 }
 
 .내용 {
-    margin: 10px;
+    margin: 30px;
 }
 
 .app-title {
@@ -23,6 +23,15 @@ body {
 body {
     margin: 10;
 }
+
+/* 내용 grid */
+.내용 {
+    display: inline-grid;
+    grid-template-columns: auto;
+    background-color: white;
+    padding: 10px;
+    
+  }
 
 
 /*인스타 스토리*/
@@ -74,7 +83,18 @@ body {
     clip-path: circle(50%);
 }
 
-/* 근로자 유형 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table {
+    border: 0;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
 .main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -82,11 +102,17 @@ body {
     padding: 30px;
 }
 
-
-.근로자_유형 {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 60px;
+/* 제목 글씨 */
+.근로자_유형 table span,
+.시급 label,
+.insurance p,
+.day_time {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    padding: 5px;
 }
 .시급 {
     display: flex;
@@ -146,14 +172,14 @@ body {
 .checkbox-4 .switch4 + label::before,
 .checkbox-4 .switch4 + label::after{
     content: '';
-    display: black;
+    display: blue;
 }
 
 .checkbox-1 .switch1 + label::before,
 .checkbox-2 .switch2 + label::before,
 .checkbox-3 .switch3 + label::before,
 .checkbox-4 .switch4 + label::before {
-    background-color: #05012c;
+    background-color: grey;
     border-radius: 500px;
     height: 15px;
     margin-right: 8px;
@@ -186,7 +212,7 @@ body {
 .checkbox-2 .switch2:checked + label::before,
 .checkbox-3 .switch3:checked + label::before,
 .checkbox-4 .switch4:checked + label::before {
-    background-color: #ffb500;
+    background-color: blue;
 }
 
 .checkbox-1 .switch1:checked + label::after,
@@ -218,7 +244,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: #ffffff;
+    background-color: #635BFF;
     padding: 5px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s
@@ -233,6 +259,7 @@ body {
     font-size: 40px;
     font-weight: bold;
     text-align: center;
+    color: #ffffff;
 }
 
 @media all and (max-width: 600px) {
