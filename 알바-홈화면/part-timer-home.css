@@ -78,13 +78,13 @@ body {
 
 select {
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 1px solid #ccc;
     font-size: 25px;
     width: 150px;
     max-width: 100%;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 270px;
 }
 
 /*실시간 근무 현황*/
@@ -125,6 +125,15 @@ select {
     z-index: -1;
 }
 
+.실시간근무현황 .현황 img {
+    width: 650px;
+    height: 300px;
+    position: absolute;
+    top: 500px;
+    left: 300px;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s
+}
 
 /*급여,근무,선지급 박스*/
 .main {
