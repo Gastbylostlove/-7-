@@ -3,30 +3,45 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
+
 .내용 {
     margin: 30px;
 }
 
-.app-title {
-    text-align: CENTER;
-    font-size: 45px;
-    font-weight: bold;
-    padding: 25px;
-    background-color: #635BFF;
-    color: #ffffff;
-}
-
-.app-title:hover {
-    color: black;
-}
 
 body {
-    margin: 10;
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+/*상단바*/
+
+.상단바 {
+    padding: 20px;
+    background-color: #635BFF;
+    display: flex;
+    align-items: center; 
+}
+
+.상단바 .화살표 img {
+    margin-right: 20px;
+    width: 50px; /* 이미지 크기 조절 */
+    height: 50px; /* 이미지 크기 조절 */
+}
+.상단바 .화살표 button {
+    background-color: #635BFF;
+    border: none;
+}
+
+.상단바 .title {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 /* 내용 grid */
 .내용 {
-    display: inline-grid;
+    display: inline-block;
     grid-template-columns: auto;
     background-color: white;
     padding: 10px;
@@ -223,12 +238,30 @@ table {
     transform: translate3d(10px, 0, 0);
 }
 
+/* 요일 추가 버튼 */
+.plus_button {
+    fill:#c7ade6;
+    display: flex;
+    justify-content: center;
+}
+
+.plus_button svg {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.1s, box-shadow 0.1s
+}
+
+.plus_button svg:hover {
+    transform: scale(1.03); 
+}
+
 /* 저장버튼 */
 .main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 70px;
     padding: 30px;
+    
 }
 
 
@@ -255,15 +288,19 @@ table {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
-.저장-box .text {
+.저장-box .text button{
     font-size: 40px;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
+    background-color: #635BFF;
+    border: none;
 }
 
-@media all and (max-width: 600px) {
-    .main {
-        grid-template-columns: 1fr;
+
+/* 웹 페이지 규격 */
+@media all and (max-height: 30vh) {
+    .상단바, .total-money, .list-1, .list-2, .list-3, .plus, footer {
+        margin: 5px; 
     }
 }

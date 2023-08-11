@@ -7,7 +7,14 @@
   </head>
 
   <body>
-    <div class="app-title">S O H O</div>
+   <!--상단바-->
+   <div class="상단바">
+    <div class="화살표">
+      <button onclick="goBack()">
+        <img src="화살표.svg" alt="화살표"></button>
+    </div>
+    <div class="title">신규등록</div>
+</div>
 
     <div class="내용">
       <!-- 신규 등록 직원 프로필 사진 -->
@@ -29,23 +36,20 @@
           <table class="tbl" width="350" height="100">
             <tbody>
               <tr>
-                <td colspan="3">근로자 유형</td>
+                <td colspan="3"><span>근로자 유형</span></td>
               </tr>
               <tr>
                 <td>
-                  <input type="radio" name="type" value="일용근로자" /><span
-                    >일용근로자</span
-                  >
+                  <input type="radio" name="type" value="일용근로자" />
+                  <p>일용근로자</p>
                 </td>
                 <td>
-                  <input type="radio" name="type" value="상시근로자" /><span
-                    >상시근로자</span
-                  >
+                  <input type="radio" name="type" value="상시근로자" />
+                  <p>상시근로자</p>
                 </td>
                 <td>
-                  <input type="radio" name="type" value="프리랜서" /><span
-                    >프리랜서</span
-                  >
+                  <input type="radio" name="type" value="프리랜서" />
+                  <p>프리랜서</p>
                 </td>
               </tr>
             </tbody>
@@ -70,114 +74,131 @@
 
         <!-- 4대보험 체크박스-->
         <div class="insurance">
-          <table class="insurance_table" width="350" height="100">
-            <tr>
-              <td colspan="3">4대보험</td>
-            </tr>
-            <tr>
-              <td>
-                <!--건강보험-->
-                <div class="checkbox-1">
-                  <input
-                    class="switch1"
-                    type="checkbox"
-                    id="switch1"
-                    name="switch1"
-                    value="private"
-                  />
-                  <label for="switch1">
-                    <span class="switch-x-text">건강보험 </span>
-                  </label>
-                </div>
-              </td>
-              <td>
-                <!--산재보험-->
-                <div class="checkbox-2">
-                  <input
-                    class="switch2"
-                    type="checkbox"
-                    id="switch2"
-                    name="switch2"
-                    value="private"
-                  />
-                  <label for="switch2">
-                    <span class="switch-x-text">산재보험 </span>
-                  </label>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <!-- 고용보험 -->
-                <div class="checkbox-3">
-                  <input
-                    class="switch3"
-                    type="checkbox"
-                    id="switch3"
-                    name="switch3"
-                    value="private"
-                  />
-                  <label for="switch3">
-                    <span class="switch-x-text">고용보험 </span>
-                  </label>
-                </div>
-              </td>
-              <td>
-                <!-- 국민연금 -->
-                <div class="checkbox-4">
-                  <input
-                    class="switch4"
-                    type="checkbox"
-                    id="switch4"
-                    name="switch4"
-                    value="private"
-                  />
-                  <label for="switch4">
-                    <span class="switch-x-text">국민연금 </span>
-                  </label>
-                </div>
-              </td>
-            </tr>
-          </table>
+          <tbody>
+            <table class="insurance_table" width="350" height="100">
+              <tr>
+                <td colspan="3"><p>4대보험</p></td>
+              </tr>
+              <tr>
+                <td>
+                  <!--건강보험-->
+                  <div class="checkbox-1">
+                    <input
+                      class="switch1"
+                      type="checkbox"
+                      id="switch1"
+                      name="switch1"
+                      value="private"
+                    />
+                    <label for="switch1">
+                      <span class="switch-x-text">건강보험 </span>
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <!--산재보험-->
+                  <div class="checkbox-2">
+                    <input
+                      class="switch2"
+                      type="checkbox"
+                      id="switch2"
+                      name="switch2"
+                      value="private"
+                    />
+                    <label for="switch2">
+                      <span class="switch-x-text">산재보험 </span>
+                    </label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!-- 고용보험 -->
+                  <div class="checkbox-3">
+                    <input
+                      class="switch3"
+                      type="checkbox"
+                      id="switch3"
+                      name="switch3"
+                      value="private"
+                    />
+                    <label for="switch3">
+                      <span class="switch-x-text">고용보험 </span>
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <!-- 국민연금 -->
+                  <div class="checkbox-4">
+                    <input
+                      class="switch4"
+                      type="checkbox"
+                      id="switch4"
+                      name="switch4"
+                      value="private"
+                    />
+                    <label for="switch4">
+                      <span class="switch-x-text">국민연금 </span>
+                    </label>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </tbody>
         </div>
         <!-- 요일/시간   -->
         <div class="day_time">
-          <table>
-            <tr>
-              <td colspan="4"><div class="text">요일/시간</div></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="select-box">
-                  <select id="business">
-                    <option value="월">월</option>
-                    <option value="화">화</option>
-                    <option value="수">수</option>
-                    <option value="목">목</option>
-                    <option value="금">금</option>
-                    <option value="토">토</option>
-                    <option value="일">일</option>
-                  </select>
-                </div>
-              </td>
-              <td>
-                <input type="time" min="09:00" max="18:00" required />
-            </td>
-            <td><span>~</span></td>
-              <td>
-                <input type="time" min="09:00" max="18:00" required />
-              </td>
-            </tr>
-          </table>
+          <tbody>
+            <table>
+              <tr>
+                <td colspan="4"><div class="text">요일/시간</div></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="select-box">
+                    <select id="business">
+                      <option value="월">월</option>
+                      <option value="화">화</option>
+                      <option value="수">수</option>
+                      <option value="목">목</option>
+                      <option value="금">금</option>
+                      <option value="토">토</option>
+                      <option value="일">일</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <input type="time" min="09:00" max="18:00" required />
+                </td>
+                <td><span>~</span></td>
+                <td>
+                  <input type="time" min="09:00" max="18:00" required />
+                </td>
+              </tr>
+            </table>
+          </tbody>
         </div>
-      </div>
-      <!-- 요일 추가하기 -->
 
-      <!-- 저장 버튼 -->
-      <div class="저장">
-        <div class="저장-box">
-          <div class="text">
-            <p>저장</p>
+        <!-- 요일 추가 버튼 -->
+        <div class="plus_button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="2em"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"
+            ></path>
+          </svg>
+        </div>
+
+        <!-- 저장 버튼 -->
+        <div class="저장">
+          <div class="저장-box">
+            <div class="text">
+              <button onclick="location.href='complete.html'">저 장</button >
+    
+            </div>
           </div>
         </div>
       </div>
