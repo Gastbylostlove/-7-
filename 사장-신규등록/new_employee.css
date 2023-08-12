@@ -9,11 +9,6 @@ body {
 }
 
 
-body {
-    margin: 0;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
 /*상단바*/
 
 .상단바 {
@@ -256,14 +251,6 @@ table {
 }
 
 /* 저장버튼 */
-.main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 70px;
-    padding: 30px;
-    
-}
-
 
 .저장 {
     display: grid;
