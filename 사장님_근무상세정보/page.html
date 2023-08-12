@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>part-timer-home</title>
+        <link rel="stylesheet" href="page.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+
+        <!-- 특이사항 추가 및 삭제 기능 -->
+        <script src="memo_add.js"></script> 
+
+        <!-- 테이블 꾸미기 -->
+        <style>
+            table{
+              border-style: none;
+              
+            }
+            td{
+              border-style: none;
+            }
+            .memo{
+                background-color: #FFF9C8;
+
+            }
+        
+        </style>
+  
+    </head>
+
+    <body>
+        <div class="app-title">근무상세정보</div>
+
+        <!-- 프로필 -->
+        <div class = "프로필">
+            <div class = 'box'>
+                <img class = "사진"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQnKWk_1Hfnkizm7nuET-oPvId_DbEE3kk0g&usqp=CAU">
+            </div>
+            <div class = '이름' >    
+                김니나 23세 
+                <br>010-1234-5678
+            </div>   
+        </div>
+
+
+        <!-- 근무 날짜  -->
+        <div class = "근무 날짜">
+            <!-- <table id = 'time' border = "2">
+                <tr><td>화</td><td> 08:00 ~ 14:00</td><td>(6시간)</td></tr>
+                <tr><td>목</td><td> 08:00 ~ 14:00</td><td>(6시간)</td></tr>
+                <tr><td>토</td><td> 10:00 ~ 17:00</td><td>(7시간)</td></tr>
+            </table> -->
+
+            <div class="heading">
+
+                <div class="cell">
+                    근무시작일
+                    <p>2023/06/03</p>
+
+                </div>
+
+                <div class="cell">
+
+                    <p></p>
+
+                </div>
+
+                <div class="cell">
+                    근무종료일
+                    <p>2023/07/03</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row">
+
+                <div class="cell">
+
+                    <p>화요일</p>
+
+                </div>
+
+                <div class="cell">
+
+                    <p>08:00 ~ 14:00</p>
+
+                </div>
+
+                <div class="cell">
+
+                    <p>(6시간)</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row">
+
+                <div class="cell">
+
+                    <p>목요일</p>
+
+                </div>
+
+                <div class="cell">
+
+                    <p>08:00 ~ 14:00</p>
+
+                </div>
+
+                <div class="cell">
+
+                    <p>(6시간)</p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        
+        <!-- 특이사항 메모  -->
+        <div class ='memo'>
+            <table id = 'memo' border="1">
+                <tr>
+                <th colspan="2">특이사항</th>
+                </tr>
+                <tr><td>7월 20일</td><td>지각</td></tr>
+                <tr><td>7월 30일</td><td>대감집 마감 대타</td></tr>
+            </table>
+            <input type = 'button'
+                    value = '+'
+                    onclick = 'addRow()'/>
+            <input type='button' 
+                    value='-' 
+                    onclick='deleteRow(-1)' />
+        </div>
+                    
+                  
+    </body>
+
+</html>
