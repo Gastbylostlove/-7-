@@ -1,10 +1,19 @@
 body {
     margin: 0;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden; /* 가로 스크롤 막기 */
+}
+
+body { min-height: 100vh; }
+
+/* 컨테이너의 최대 가로 너비를 화면의 1/3로 설정 */
+.container {
+    /* max-width: 33.33%; */
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /*상단바*/
-
 .상단바 {
     padding: 20px;
     background-color: #635BFF;
@@ -35,13 +44,45 @@ body {
     margin-right: 20px; 
     border-radius: 35px; 
     padding: 30px; 
-    background-color: white;
+    background-color: #F0F0F0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.text-금액::before {
+    content: '<'; /* 꺽쇠 모양 */
+    font-size: 60px; /* 꺽쇠 크기 조정 */
+    margin: 0 170px; /* 텍스트와 꺽쇠 사이의 간격 조정 */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.text-금액::after {
+    content: '>'; /* 꺽쇠 모양 */
+    font-size: 60px; /* 꺽쇠 크기 조정 */
+    margin: 0 170px; /* 텍스트와 꺽쇠 사이의 간격 조정 */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.text-금액::before {
+    left: -30px; /* 왼쪽 꺽쇠 위치 */
+}
+
+.text-금액::after {
+    right: -30px; /* 오른쪽 꺽쇠 위치 */
 }
 
 .text-금액 {
     text-align: center;
     font-size: 30px;
+    position: relative;
+}
+
+.text-금액 .large {
+    font-size: 50px; /* 큰 숫자의 텍스트 크기 */
+    font-weight:200; /* 강조 효과를 위해 폰트 굵기 설정 */
 }
 
 .금액 {
@@ -74,15 +115,15 @@ body {
 }
 
 .list-1 {
-    border-left: 10px solid rosybrown
+    border-left: 20px solid #cae4ab;
 }
 
 .list-2 {
-    border-left: 10px solid rgb(117, 128, 0);
+    border-left: 20px solid #97f5d4;
 }
 
 .list-3 {
-    border-left: 10px solid rgb(99, 69, 198);
+    border-left: 20px solid #FFD9A2;
 }
 
 .where {
@@ -149,5 +190,6 @@ footer {
 @media all and (max-height: 30vh) {
     .상단바, .total-money, .list-1, .list-2, .list-3, .plus, footer {
         margin: 5px; 
+        width:100%;
     }
 }
