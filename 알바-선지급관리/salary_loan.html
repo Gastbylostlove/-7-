@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>new_employee</title>
+    <link rel="stylesheet" href="salary_loan.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!--상단바-->
+      <div class="상단바">
+        <div class="화살표">
+          <button onclick="goBack()">
+            <img src="화살표.svg" alt="화살표" />
+          </button>
+        </div>
+        <div class="title">선지급 관리</div>
+      </div>
+
+      <!--선지급 가능금액-->
+      <div class="available_amount">
+        <div class="text_금액">선지급 가능금액(2023.08.12 기준)</div>
+        <div class="금액">932,100원</div>
+      </div>
+
+      <div class="신청내역">선지급 신청내역</div>
+
+      <!-- 신청금액 -->
+      <div class="신청금액">
+        <p>신청금액</p>
+        <div class="input_금액">
+          <input
+            class="입력"
+            type="number"
+            min="0"
+            step="10"
+            placeholder="신청금액 입력"
+          />
+          <div class="원">원</div>
+          
+        </div>
+      </div>
+      <div class="checkbox">
+        <select class="사업장선택">
+          <option class="선택">사업장 선택</option>
+          <option class="사업장">스타벅스</option>
+          <option class="사업장">CGV</option>
+          <option class="사업장">맥도날드</option>
+        </select>
+      </div>
+
+      <!-- 신청하기 버튼 -->
+      <div class="신청버튼">
+        <div class="저장-box">
+          <div class="text">
+            <button onclick="location.href='승인.html'">신청하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
