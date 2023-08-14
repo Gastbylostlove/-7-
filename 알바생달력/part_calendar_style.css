@@ -1,0 +1,47 @@
+/* 페이지 타이틀 */
+.app-title {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    padding: 25px;
+    background-color: #635BFF;
+    color: #ffffff;
+}
+
+
+
+/* 오늘날짜 */
+.today{
+    text-align : center;
+    font-weight: bolder;
+    font-size: 200%; 
+
+}
+
+
+
+/* 일정 리스트 */
+.list-1, .list-2, .list-3 {
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; 
+    margin-bottom: 20px;
+    margin-left: 20px; 
+    margin-right: 20px; 
+    border-radius: 20px; 
+    padding: 30px; 
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.list-1 {
+    border-left: 20px solid #cae4ab;
+}
+
+.list-2 {
+    border-left: 20px solid #97f5d4;
+}
+
+.list-3 {
+    border-left: 20px solid #FFD9A2;
+}
