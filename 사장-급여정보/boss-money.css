@@ -1,26 +1,60 @@
 body {
-    margin: 10;
+    width: 400px;
+    height: 620px;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    /* Flex 컨테이너로 설정 */
+    flex-direction: column;
+    /* 세로 방향으로 정렬 */
+    justify-content: center;
+    /* 수직 가운데 정렬 */
+    align-items: center;
+    /* 수평 가운데 정렬 */
+    box-sizing: border-box; /* 내용과 패딩을 너비에 포함 */
 }
 
+.내용 {
+    margin: 0 20px; /* 양 옆에 20px 마진 설정 */
+    width: calc(100% - 40px); /* 전체 가로 너비에서 마진을 뺀 값으로 설정 */
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+
 /*인스타 스토리*/
+
 .container {
-    overflow-x: hidden; /* 스크롤바 숨김 */
+    overflow-x: hidden;
     overscroll-behavior-x: contain;
     background-color: white;
-    padding: 1rem; 
-    width: 100%;
+    padding: 0.75rem;
+    width: 400px; /* 가로 너비 수정 */
+    height: 100px; /* 세로 높이 수정 */
+    box-sizing: border-box;
+    display: flex; /* 추가 */
+    align-items: center; /* 추가 */
+    justify-content: center; /* 추가 */
+    -ms-overflow-style: none;
+    margin: 0 auto; /* 가운데 정렬을 위한 마진 설정 */
+    margin-bottom: 10px;
 }
 
 .story-container {
+    width: 100%; /* 가로 너비 100%로 수정 */
+    height: 100%; /* 세로 높이 100%로 수정 */
+    box-sizing: border-box;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 5rem;
-    grid-gap: 1.2rem;
+    grid-auto-columns: 4.2rem;
+    grid-gap: 1.95rem;
+    margin: 0; /* 위 아래 마진 제거 */
 }
+
 
 .story-container .content {
     display: grid;
-    grid-gap: 0.5rem;
+    grid-gap: 0.375rem;
     margin: 0;
     text-align: center;
     position: relative;
@@ -35,8 +69,8 @@ body {
 
 .story-container .content .img-container {
     display: inline-block;
-    width: 5rem;
-    height: 5rem;
+    height: 5rem; /* 3.5rem 대신 5.25rem로 변경 */
+    width: 5rem; /* 3.5rem 대신 5.25rem로 변경 */
     border-radius: 50%;
     background:
         radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
@@ -55,16 +89,16 @@ body {
 .story-container .content:last-child::after {
     content: '';
     position: absolute;
-    width: 2rem;
+    width: 1.95rem; /* 1.3rem 대신 1.95rem로 변경 */
     height: 100%;
-    right: -1rem; 
+    right: -1.125rem; /* -0.75rem 대신 -1.125rem로 변경 */
 }
 
 .story-container .content .text-container {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-size: 0.9rem;
+    font-size: 0.75rem; /* 0.5rem 대신 0.75rem로 변경 */
 }
 
 .container.scrollable {
@@ -73,71 +107,82 @@ body {
 
 /* 스크롤바의 기본 디자인을 none으로 설정 */
 .container {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer / Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer / Edge */
 }
 
 /* 커서를 올리면 스크롤바가 나타나도록 설정 */
 .container::-webkit-scrollbar {
-    width: 6px; /* 스크롤바 너비 */
+    width: 3px;
+    /* 스크롤바 너비 */
 }
 
 .container::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3); /* 스크롤바 색상 */
-    border-radius: 3px; /* 스크롤바 모서리 반경 */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* 스크롤바 색상 */
+    border-radius: 1.5px;
+    /* 스크롤바 모서리 반경 */
 }
 
 .container::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.6); /* 스크롤바 호버 시 색상 */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* 스크롤바 호버 시 색상 */
 }
 
 .container::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.1); /* 스크롤바 트랙 배경 색상 */
+    background-color: rgba(0, 0, 0, 0.1);
+    /* 스크롤바 트랙 배경 색상 */
 }
 
-
 /*이번달 총 인건비 칸*/
+
 .total-money {
     justify-content: center;
     align-items: center;
-    margin-top: 5px; 
-    margin-left: 5px; 
-    margin-right: 5px; 
-    border-radius: 35px; 
-    padding: 30px; 
-    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 18px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    border-radius: 35px;
+    background-color: #F0F0F0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .text-금액 {
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
+    justify-content: center;
 }
 
 .금액 {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     align-items: center;
 }
 
 .plus-minus {
     text-align: center;
-    font-size: 12px;
+    font-size: 6px;
     font-weight: bold;
-    margin-top: 5px; 
+    margin-top: 2.5px;
     align-items: center;
 }
 
 /*막대그래프*/
 .graph {
-    margin-bottom: 0.5em;
-    font: normal 100%/150% arial, helvetica, sans-serif;
+    margin-bottom: 12px;
+    font: normal 80%/120% arial, helvetica, sans-serif;
+    width: 100%;
 }
 
 .graph caption {
-    font: bold 150%/120% arial, helvetica, sans-serif;
-    padding-bottom: 0.33em;
+    font: bold 120%/96% arial, helvetica, sans-serif;
+    padding-bottom: 0.27em;
 }
 
 .graph tbody th {
@@ -146,12 +191,12 @@ body {
 
 @supports (display:grid) {
 
-    @media (min-width:32em) {
+    @media (max-width: 400px) {
         
         .graph {
             display: block;
-            width: 600px;
-            height: 300px;
+            width: 100%;
+            height: 250px;
         }
 
         .graph caption {
@@ -166,38 +211,38 @@ body {
             position: relative;
             display: grid;
 
-            grid-template-columns: repeat(auto-fit, minmax(2em, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(1.6em, 0.8fr));
         
-            column-gap: 2.5%;
+            column-gap: 2%;
             align-items: end;
             height: 100%;
-            margin: 3em 0 1em 2.8em;
-            padding: 0 1em;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+            margin: 2.4em 0 0.8em 2.24em;
+            padding: 0 0.8em;
+            border-bottom: 1.6px solid rgba(0, 0, 0, 0.5);
             background: repeating-linear-gradient(180deg,
                     rgba(170, 170, 170, 0.7) 0,
-                    rgba(170, 170, 170, 0.7) 1px,
-                    transparent 1px,
-                    transparent 20%);
+                    rgba(170, 170, 170, 0.7) 0.8px,
+                    transparent 0.8px,
+                    transparent 16%);
         }
 
         .graph tbody:before,
         .graph tbody:after {
             position: absolute;
-            left: -3.2em;
-            width: 2.8em;
+            left: -2.56em;
+            width: 2.24em;
             text-align: right;
-            font: bold 80%/120% arial, helvetica, sans-serif;
+            font: bold 64%/96% arial, helvetica, sans-serif;
         }
 
         .graph tbody:before {
             content: "100%";
-            top: -0.6em;
+            top: -0.48em;
         }
 
         .graph tbody:after {
             content: "0%";
-            bottom: -0.6em;
+            bottom: -0.48em;
         }
 
         .graph tr {
@@ -217,14 +262,13 @@ body {
 
         .graph tbody th {
             position: absolute;
-            top: -2.4em;
+            top: -1.92em;
             left: 0;
             width: 100%;
             font-weight: normal;
             text-align: center;
             white-space: nowrap;
             text-indent: 0;
-            /* transform: rotate(-20deg); */
         }
 
         .graph tbody th:after {
@@ -235,8 +279,8 @@ body {
             width: 100%;
             height: 100%;
             background: #635BFF;
-            border-radius: 0.5em 0.5em 0 0;
-            transition: background 0.5s;
+            border-radius: 0.4em 0.4em 0 0;
+            transition: background 0.4s;
         }
 
         .graph tr:hover td {
@@ -249,18 +293,18 @@ body {
             left: 50%;
             top: 50%;
             width: 0;
-            padding: 0.5em 0;
-            margin: -1em 0 0;
-            font: normal 85%/120% arial, helvetica, sans-serif;
+            padding: 0.4em 0;
+            margin: -0.8em 0 0;
+            font: normal 68%/96% arial, helvetica, sans-serif;
             font-weight: bold;
             opacity: 0;
-            transition: opacity 0.5s;
+            transition: opacity 0.4s;
             color: white;
         }
 
         .toggleGraph:checked+table td span, .graph tr:hover td span {
-            width: 4em;
-            margin-left: -2em;
+            width: 3.2em;
+            margin-left: -1.6em;
             opacity: 1;
         }
     }
@@ -269,36 +313,39 @@ body {
 /* 하단 네비게이션 바 아이콘 */
 
 footer {
-    padding: 5px;
+    padding: 2.5px;
     text-align: center;
-    border-radius: 35px; 
-    margin-top: 20px;
-    margin-left: 5px; 
-    margin-right: 5px; 
-    display: grid;
+    border-radius: 17.5px;
+    /* display: grid; */
+    display: grid; /* Flex 컨테이너로 설정 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
 }
 
 .circle-icon {
-    font-size: 30px; 
+    font-size: 14.4px; /* 18px의 0.8배 */
     color: rgb(0, 0, 0);
     border-radius: 50%;
-    padding: 5px; 
-    margin: 10px; 
+    padding: 2px; /* 2.5px의 0.8배 */
+    margin: 4px; /* 5px의 0.8배 */
     display: inline-block;
-    gap: 15px; 
-    transition: opacity 0.3s;
+    gap: 10px; /* 7px의 0.8배 */
+    transition: opacity 0.15s;
 }
 
 .circle-icon:hover {
-    transform: scale(1.2);
-    opacity: 0.4;
+    transform: scale(1.05);
+    opacity: 0.2;
 }
 
-@media all and (max-width: 600px) {
-    #body {
-        flex-direction: column;
+@media all and (max-width: 300px) {
+    .main {
+        grid-template-columns: 1fr;
     }
 }
