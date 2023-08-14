@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE-edge" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>soho-money</title>
         <link rel="stylesheet" href="boss-money.css" />
@@ -16,7 +16,6 @@
         />
 
         <script src="scroll.js"></script>
-
     </head>
 
     <body>
@@ -104,76 +103,78 @@
             </div>
         </div>
 
-        <div class="total-money">
-            <div class="text-금액">이번달 총 인건비</div>
-            <div class="금액">9,672,000원</div>
-            <div class="plus-minus">전월대비 +20000원</div>
+        <div class="내용">
+            <div class="total-money">
+                <div class="text-금액">이번달 총 인건비</div>
+                <div class="금액">9,672,000원</div>
+                <div class="plus-minus">전월대비 +20000원</div>
+            </div>
+
+            <!--막대그래프-->
+            <table class="graph">
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Percent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="height: 85%">
+                        <th scope="row">1월</th>
+                        <td><span>85%</span></td>
+                    </tr>
+                    <tr style="height: 23%">
+                        <th scope="row">2월</th>
+                        <td><span>23%</span></td>
+                    </tr>
+                    <tr style="height: 7%">
+                        <th scope="row">3월</th>
+                        <td><span>7%</span></td>
+                    </tr>
+                    <tr style="height: 38%">
+                        <th scope="row">4월</th>
+                        <td><span>38%</span></td>
+                    </tr>
+                    <tr style="height: 35%">
+                        <th scope="row">5월</th>
+                        <td><span>35%</span></td>
+                    </tr>
+                    <tr style="height: 30%">
+                        <th scope="row">6월</th>
+                        <td><span>30%</span></td>
+                    </tr>
+                    <tr style="height: 5%">
+                        <th scope="row">7월</th>
+                        <td><span>5%</span></td>
+                    </tr>
+                    <tr style="height: 20%">
+                        <th scope="row">8월</th>
+                        <td><span>20%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!--하단 네비게이션 바-->
+            <footer>
+                <span class="circle-icon">
+                    <!--사장 근무정보 페이지: boss-work.html-->
+                    <a href="boss-work.html">
+                        <img src="work-bar.svg" alt="Work Icon" />
+                    </a>
+                </span>
+                <span class="circle-icon">
+                    <img src="money-bar.svg" alt="Money Icon" />
+                </span>
+                <span class="circle-icon">
+                    <!--사장 홈화면 페이지: boss-home.html-->
+                    <a href="boss-home.html">
+                        <img src="home-bar.svg" alt="Home Icon" />
+                    </a>
+                </span>
+                <span class="circle-icon">
+                    <img src="setting-bar.svg" alt="Setting Icon" />
+                </span>
+            </footer>
         </div>
-
-        <!--막대그래프-->
-        <table class="graph">
-            <thead>
-                <tr>
-                    <th scope="col">Item</th>
-                    <th scope="col">Percent</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr style="height: 85%">
-                    <th scope="row">1월</th>
-                    <td><span>85%</span></td>
-                </tr>
-                <tr style="height: 23%">
-                    <th scope="row">2월</th>
-                    <td><span>23%</span></td>
-                </tr>
-                <tr style="height: 7%">
-                    <th scope="row">3월</th>
-                    <td><span>7%</span></td>
-                </tr>
-                <tr style="height: 38%">
-                    <th scope="row">4월</th>
-                    <td><span>38%</span></td>
-                </tr>
-                <tr style="height: 35%">
-                    <th scope="row">5월</th>
-                    <td><span>35%</span></td>
-                </tr>
-                <tr style="height: 30%">
-                    <th scope="row">6월</th>
-                    <td><span>30%</span></td>
-                </tr>
-                <tr style="height: 5%">
-                    <th scope="row">7월</th>
-                    <td><span>5%</span></td>
-                </tr>
-                <tr style="height: 20%">
-                    <th scope="row">8월</th>
-                    <td><span>20%</span></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!--하단 네비게이션 바-->
-        <footer>
-            <span class="circle-icon">
-                <!--사장 근무정보 페이지: boss-work.html-->
-                <a href="boss-work.html">
-                    <img src="work-bar.svg" alt="Work Icon" />
-                </a>
-            </span>
-            <span class="circle-icon">
-                <img src="money-bar.svg" alt="Money Icon" />
-            </span>
-            <span class="circle-icon">
-                <!--사장 홈화면 페이지: boss-home.html-->
-                <a href="boss-home.html">
-                    <img src="home-bar.svg" alt="Home Icon" />
-                </a>
-            </span>
-            <span class="circle-icon">
-                <img src="setting-bar.svg" alt="Setting Icon" />
-            </span>
-        </footer>
     </body>
 </html>
