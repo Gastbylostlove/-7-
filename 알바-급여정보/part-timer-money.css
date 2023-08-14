@@ -1,141 +1,183 @@
 body {
+    width: 400px;
+    height: 620px;
     margin: 0;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    overflow-x: hidden; /* 가로 스크롤 막기 */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    /* Flex 컨테이너로 설정 */
+    flex-direction: column;
+    /* 세로 방향으로 정렬 */
+    justify-content: center;
+    /* 수직 가운데 정렬 */
+    align-items: center;
+    /* 수평 가운데 정렬 */
+    box-sizing: border-box;
 }
 
-body { min-height: 100vh; }
-
-/* 컨테이너의 최대 가로 너비를 화면의 1/3로 설정 */
 .container {
-    /* max-width: 33.33%; */
-    margin: 0 auto;
-    box-sizing: border-box;
+    width: 400px;
+    height: 620px;
+}
+
+.내용 {
+    margin: 0 20px;
+    box-sizing: border-box; /* 내용과 패딩을 너비에 포함 */
 }
 
 /*상단바*/
 .상단바 {
-    padding: 20px;
-    background-color: #635BFF;
     display: flex;
-    align-items: center; 
+    align-items: center;
+
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #635BFF;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.상단바 .화살표 {
+    margin-right: 10px;
 }
 
 .상단바 .화살표 img {
-    margin-right: 20px;
-    width: 50px; /* 이미지 크기 조절 */
-    height: 50px; /* 이미지 크기 조절 */
+    width: 20px;
+    height: 20px;
 }
 
 .상단바 .moneyinfo {
     color: #ffffff;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: bold;
+    flex-grow: 1;
 }
-
 
 /*7월 총 급여 정보*/
 .total-money {
     justify-content: center;
     align-items: center;
-    margin-top: 50px; 
-    margin-bottom: 60px;
-    margin-left: 20px; 
-    margin-right: 20px; 
-    border-radius: 35px; 
-    padding: 30px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 18px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    border-radius: 35px;
     background-color: #F0F0F0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .text-금액::before {
-    content: '<'; /* 꺽쇠 모양 */
-    font-size: 60px; /* 꺽쇠 크기 조정 */
-    margin: 0 170px; /* 텍스트와 꺽쇠 사이의 간격 조정 */
+    content: '<';
+    /* 꺽쇠 모양 */
+    font-size: 22px;
+    font-weight: bolder;
+    /* 꺽쇠 크기 조정 */
+    margin: 0 170px;
+    /* 텍스트와 꺽쇠 사이의 간격 조정 */
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .text-금액::after {
-    content: '>'; /* 꺽쇠 모양 */
-    font-size: 60px; /* 꺽쇠 크기 조정 */
-    margin: 0 170px; /* 텍스트와 꺽쇠 사이의 간격 조정 */
+    content: '>';
+    /* 꺽쇠 모양 */
+    font-size: 22px;
+    font-weight: bolder;
+    /* 꺽쇠 크기 조정 */
+    margin: 0 170px;
+    /* 텍스트와 꺽쇠 사이의 간격 조정 */
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .text-금액::before {
-    left: -30px; /* 왼쪽 꺽쇠 위치 */
+    left: -100px;
+    /* 왼쪽 꺽쇠 위치 */
 }
 
 .text-금액::after {
-    right: -30px; /* 오른쪽 꺽쇠 위치 */
+    right: -100px;
+    /* 오른쪽 꺽쇠 위치 */
 }
 
 .text-금액 {
     text-align: center;
-    font-size: 30px;
+    font-size: 15px;
     position: relative;
 }
 
 .text-금액 .large {
-    font-size: 50px; /* 큰 숫자의 텍스트 크기 */
-    font-weight:200; /* 강조 효과를 위해 폰트 굵기 설정 */
+    font-size: 27px;
+    /* 큰 숫자의 텍스트 크기 */
+    font-weight: 200;
+    /* 강조 효과를 위해 폰트 굵기 설정 */
 }
 
 .금액 {
     text-align: center;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bolder;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .plus-minus {
     text-align: center;
-    font-size: 20px;
+    font-size: 10px;
     font-weight: bold;
-    margin-top: 20px; 
+    margin-top: 8px;
     align-items: center;
 }
 
-.list-1, .list-2, .list-3 {
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px; 
-    margin-bottom: 20px;
-    margin-left: 20px; 
-    margin-right: 20px; 
-    border-radius: 20px; 
-    padding: 30px; 
+/*알바 목록*/
+.list-1,
+.list-2,
+.list-3 {
+    justify-content: space-between;
+    align-items: flex-start; /* 변경 */
     background-color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; /* 변경 */
+    height: auto; /* 변경 */
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 10px;
+    position: relative; /* 추가 */
 }
 
 .list-1 {
-    border-left: 20px solid #cae4ab;
+    border-left: 15px solid #cae4ab;
 }
 
 .list-2 {
-    border-left: 20px solid #97f5d4;
+    border-left: 15px solid #97f5d4;
 }
 
 .list-3 {
-    border-left: 20px solid #FFD9A2;
+    border-left: 15px solid #FFD9A2;
 }
 
 .where {
-    align-self: flex-start;
     font-weight: bold;
-    font-size: 29px;
+    font-size: 18px;
+    align-self: flex-start; /* 변경 */
+    margin-bottom: auto; /* 추가 */
 }
 
 .howmuch {
-    align-self: flex-end;
-    font-size: 25px;
+    font-size: 15px;
     text-align: right;
+    color: #777777;
+    align-self: flex-end; /* 변경 */
+    margin-top: auto; /* 추가 */
 }
 
 /*추가 버튼*/
@@ -143,53 +185,56 @@ body { min-height: 100vh; }
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 15vh; 
 }
 
 .plus img {
-    width: 200px;
-    height: 200px;
+    width: 30%;
+    /* 가로 너비 100% */
+    max-width: 400px;
+    /* 최대 너비 400px로 제한 */
     transition: transform 0.1s, box-shadow 0.1s
 }
 
 .plus img:hover {
-    transform: scale(1.03); 
+    transform: scale(1.03);
 }
 
 /* 하단 네비게이션 바 아이콘 */
+
 footer {
-    padding: 5px;
+    padding: 2.5px;
     text-align: center;
-    border-radius: 35px; 
-    margin-left: 20px; 
-    margin-right: 20px; 
-    display: grid;
+    border-radius: 17.5px;
+    /* display: grid; */
+    display: grid; /* Flex 컨테이너로 설정 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
 }
 
 .circle-icon {
-    font-size: 30px; 
+    font-size: 14.4px; /* 18px의 0.8배 */
     color: rgb(0, 0, 0);
     border-radius: 50%;
-    padding: 5px; 
-    margin: 10px; 
+    padding: 2px; /* 2.5px의 0.8배 */
+    margin: 4px; /* 5px의 0.8배 */
     display: inline-block;
-    gap: 15px; 
-    transition: opacity 0.3s;
+    gap: 10px; /* 7px의 0.8배 */
+    transition: opacity 0.15s;
 }
 
 .circle-icon:hover {
-    transform: scale(1.2);
-    opacity: 0.4;
+    transform: scale(1.05);
+    opacity: 0.2;
 }
 
-/* 웹 페이지 규격 */
-@media all and (max-height: 30vh) {
-    .상단바, .total-money, .list-1, .list-2, .list-3, .plus, footer {
-        margin: 5px; 
-        width:100%;
+@media all and (max-width: 300px) {
+    .main {
+        grid-template-columns: 1fr;
     }
 }
