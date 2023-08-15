@@ -1,6 +1,14 @@
 body {
+    width: 400px;
+    height: 620px;
     margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: flex-start; /* align to the top */
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .승인 {
@@ -10,25 +18,27 @@ body {
     padding: 30px; 
     background-color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    width: 600px;
-    height: 700px;
+    width: 250px; /* Updated width */
+    height: 350px; /* Updated height */
     position: absolute;
-    top: 20%;
-    left: 36%;
-    margin: -25px 0 0 -25px;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center using translation */
+    margin: 0; /* Remove margin */
+    background: linear-gradient(to bottom, rgb(200, 180, 230) 0px, transparent 30px); /* 그라디언트 배경 추가 */
 }
+
 
 .back {
     text-align: right;
-
 }
 
 .back button{
-    font-size: 30px;
+    font-size: 20px;
     background-color: white;
   color: black; /* 텍스트 색상 설정 */
   border: none;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .bell_img img {
@@ -36,23 +46,33 @@ body {
     align-items: center;
     justify-content: center; 
     width: 100%;
-    height: 15vh; 
+    height: 14vh; 
 }
 
-.name,
-.complete_message {
+.name {
     text-align: center;
-    font-size: 60px;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 0px;
-    margin: 40px 30px 10px 10px;
-
+    justify-content: center; 
+    margin: 20px 15px 5px 10px;
 }
 
+.complete_message {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    justify-content: center; 
+    margin-bottom: 20px;
+
+}
 .저장 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 50px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 10px;
 }
 
 .저장-box {
@@ -62,7 +82,7 @@ body {
     align-items: center;
     border-radius: 20px;
     background-color: #FFC32B;
-    padding: 13px;
+    padding: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
     
@@ -74,11 +94,10 @@ body {
 }
 
 .저장-box .text button{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
     color: black;
     background-color: #FFC32B;
     border: none;
 }
-
