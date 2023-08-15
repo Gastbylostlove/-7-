@@ -40,7 +40,7 @@
                 <img class = "사진"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQnKWk_1Hfnkizm7nuET-oPvId_DbEE3kk0g&usqp=CAU">
             </div>
             <div class = '이름' >    
-                김니나 23세 
+                김니나 23세 (여)
                 <br>010-1234-5678
             </div>   
         </div>
@@ -48,11 +48,6 @@
 
         <!-- 근무 날짜  -->
         <div class = "근무 날짜">
-            <!-- <table id = 'time' border = "2">
-                <tr><td>화</td><td> 08:00 ~ 14:00</td><td>(6시간)</td></tr>
-                <tr><td>목</td><td> 08:00 ~ 14:00</td><td>(6시간)</td></tr>
-                <tr><td>토</td><td> 10:00 ~ 17:00</td><td>(7시간)</td></tr>
-            </table> -->
 
             <div class="heading">
 
@@ -127,23 +122,142 @@
 
         </div>
         
-        <!-- 특이사항 메모  -->
-        <div class ='memo'>
-            <table id = 'memo' border="1">
+        <!-- 특이사항 메모 -->
+        <div class="container">
+            <table class="_table">
+              <thead>
                 <tr>
-                <th colspan="2">특이사항</th>
+                  <th colspan="2">특이사항</th>
                 </tr>
                 <tr><td>7월 20일</td><td>지각</td></tr>
                 <tr><td>7월 30일</td><td>대감집 마감 대타</td></tr>
+                <tr>
+                  <td colspan="3">
+                  </td>
+                </tr>
+              </thead>
+              <tbody id="table_body">
+                <!-- 여기에 추가되는 행들이 들어갈 예정 -->
+              </tbody>
             </table>
-            <input type = 'button'
-                    value = '+'
-                    onclick = 'addRow()'/>
-            <input type='button' 
-                    value='-' 
-                    onclick='deleteRow(-1)' />
-        </div>
-                    
+            <button onclick="showPopup()">추가</button>
+          </div>
+        
+          <div id="popup" class="popup">
+            <div class="popup-content">
+              <span class="close" onclick="closePopup()">&times;</span>
+              <input type="text" id="popupDateInput" class="form_control" placeholder="날짜">
+              <input type="text" id="popupContentInput" class="form_control" placeholder="내용">
+              <button class="success" onclick="addRowFromPopup()">추가</button>
+            </div>
+          </div>
+        
+          <script>
+            function showPopup() {
+              const popup = document.getElementById("popup");
+              popup.style.display = "block";
+            }
+        
+            function closePopup() {
+              const popup = document.getElementById("popup");
+              popup.style.display = "none";
+            }
+        
+            function addRowFromPopup() {
+              const table = document.getElementById('table_body');
+              const newRow = table.insertRow();
+        
+              const newCell1 = newRow.insertCell(0);
+              const newCell2 = newRow.insertCell(1);
+              const newCell3 = newRow.insertCell(2);
+        
+              const dateInput = document.getElementById('popupDateInput');
+              const contentInput = document.getElementById('popupContentInput');
+        
+              newCell1.innerText = dateInput.value;
+              newCell2.innerText = contentInput.value;
+        
+              const deleteButton = document.createElement('button');
+              deleteButton.className = 'danger';
+              deleteButton.innerText = '삭제';
+              deleteButton.onclick = function() {
+                remove_tr(this);
+              };
+        
+              newCell3.appendChild(deleteButton);
+        
+              // 입력 폼 초기화
+              dateInput.value = '';
+              contentInput.value = '';
+        
+              // 팝업 닫기
+              closePopup();
+            }
+        
+            function remove_tr(This) {
+              if (This.closest('tbody').childElementCount == 1) {
+                alert("삭제할 수 없습니다.");
+              } else {
+                This.closest('tr').remove();
+              }
+            }
+          </script>
+        
+          <style>
+            /* 팝업 스타일 */
+            .popup {
+              display: none;
+              position: fixed;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+        
+            .popup-content {
+              background-color: #fff;
+              margin: 20% auto;
+              padding: 20px;
+              border-radius: 5px;
+              width: 50%;
+              position: relative;
+            }
+        
+            .close {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              font-size: 20px;
+              font-weight: bold;
+              cursor: pointer;
+            }
+          </style>
+      
+      <!-- 하단 메뉴 -->
+        <!-- 하단 바 메뉴 -->
+  <footer>
+    <span class="circle-icon">
+        <!--사장 근무정보 페이지: boss-work.html-->
+        <a href="part-timer-work.html">
+            <img src="work-bar.svg" alt="Work Icon" />
+        </a>
+    </span>
+    <span class="circle-icon">
+        <img src="money-bar.svg" alt="Money Icon" />
+    </span>
+    <span class="circle-icon">
+        <!--사장 홈화면 페이지: boss-home.html-->
+        <a href="part-timer-home.html"> 
+            <img src="home-bar.svg" alt="Home Icon" />
+        </a>
+    </span>
+    <span class="circle-icon">
+        <img src="setting-bar.svg" alt="Setting Icon" />
+    </span>
+ 
+      
+
                   
     </body>
 
