@@ -1,25 +1,31 @@
 body {
+    width: 400px;
+    height: 620px;
     margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: flex-start; /* align to the top */
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .완료 {
     justify-content: center;
     align-items: center;
-    /* margin-top: 50px; 
-    margin-bottom: 60px;
-    margin-left: 0px; 
-    margin-right: 20px;  */
     border-radius: 35px; 
     padding: 30px; 
     background-color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    width: 600px;
-    height: 700px;
+    width: 250px; /* Updated width */
+    height: 350px; /* Updated height */
     position: absolute;
-    top: 20%;
-    left: 36%;
-    margin: -25px 0 0 -25px;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center using translation */
+    margin: 0; /* Remove margin */
+    background: linear-gradient(to bottom, rgb(200, 180, 230) 0px, transparent 30px); /* 그라디언트 배경 추가 */
 }
 
 .check_img {
@@ -28,16 +34,26 @@ body {
     align-items: center;
     width: 100%;
     height: 15vh; 
-    margin-top: 100px;
+    margin-top: 60px;
     margin-bottom: 50px;
     
 }
 
-.name,
+.check_img img {
+    max-width: 80%; /* Adjust the percentage as needed */
+    max-height: 80%; /* Adjust the percentage as needed */
+}
+
+.name {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+
+}
 .complete_message {
     text-align: center;
-    font-size: 80px;
+    font-size: 35px;
     font-weight: bold;
-    margin-bottom: 20px;
-
 }
