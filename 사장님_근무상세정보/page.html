@@ -2,9 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>part-timer-home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>boss-work-detail</title>
         <link rel="stylesheet" href="page.css" />
-
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -32,7 +32,15 @@
     </head>
 
     <body>
-        <div class="app-title">근무상세정보</div>
+        <!--상단바-->
+        <div class="상단바">
+            <div class="화살표">
+                <button onclick="goBack()">
+                    <img src="화살표.svg" alt="화살표" />
+                </button>
+            </div>
+            <div class="title">근무상세정보</div>
+        </div>
 
         <!-- 프로필 -->
         <div class = "프로필">
@@ -47,79 +55,44 @@
 
 
         <!-- 근무 날짜  -->
-        <div class = "근무 날짜">
-
+        <div class = "근무날짜">
             <div class="heading">
-
                 <div class="cell">
                     근무시작일
-                    <p>2023/06/03</p>
-
+                    <p class="date">2023/06/03</p>
                 </div>
-
                 <div class="cell">
-
                     <p></p>
-
                 </div>
-
                 <div class="cell">
                     근무종료일
-                    <p>2023/07/03</p>
-
+                    <p class="date">2023/07/03</p>
                 </div>
-
             </div>
 
-
-
             <div class="row">
-
                 <div class="cell">
-
                     <p>화요일</p>
-
                 </div>
-
                 <div class="cell">
-
                     <p>08:00 ~ 14:00</p>
-
                 </div>
-
                 <div class="cell">
-
                     <p>(6시간)</p>
-
                 </div>
-
             </div>
-
-
 
             <div class="row">
-
                 <div class="cell">
-
                     <p>목요일</p>
-
                 </div>
-
                 <div class="cell">
-
                     <p>08:00 ~ 14:00</p>
-
                 </div>
-
                 <div class="cell">
-
                     <p>(6시간)</p>
-
                 </div>
-
             </div>
-
-
         </div>
         
         <!-- 특이사항 메모 -->
@@ -127,7 +100,7 @@
             <table class="_table">
               <thead>
                 <tr>
-                  <th colspan="2">특이사항</th>
+                  <th colspan="1">특이사항</th>
                 </tr>
                 <tr><td>7월 20일</td><td>지각</td></tr>
                 <tr><td>7월 30일</td><td>대감집 마감 대타</td></tr>
@@ -239,26 +212,26 @@
   <footer>
     <span class="circle-icon">
         <!--사장 근무정보 페이지: boss-work.html-->
-        <a href="part-timer-work.html">
+        <a href="boss-work.html">
             <img src="work-bar.svg" alt="Work Icon" />
         </a>
     </span>
     <span class="circle-icon">
-        <img src="money-bar.svg" alt="Money Icon" />
+        <a href="boss-money.html">
+            <img src="money-bar.svg" alt="Money Icon" />
+        </a>
     </span>
     <span class="circle-icon">
         <!--사장 홈화면 페이지: boss-home.html-->
-        <a href="part-timer-home.html"> 
+        <a href="boss-home.html"> 
             <img src="home-bar.svg" alt="Home Icon" />
         </a>
     </span>
     <span class="circle-icon">
         <img src="setting-bar.svg" alt="Setting Icon" />
-    </span>
- 
+    </span> 
       
-
-                  
+         
     </body>
 
 </html>
