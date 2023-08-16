@@ -169,8 +169,8 @@ footer {
     opacity: 0.4;
 }
 
-@media all and (max-width: 600px) {
-    #body {
-        flex-direction: column;
+@media all and (max-width: 300px) {
+    .main {
+        grid-template-columns: 1fr;
     }
 }
