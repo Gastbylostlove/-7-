@@ -9,7 +9,7 @@
 <script src='schedule.html'></script>
 <link rel="stylesheet" href="boss_calnedar_style.css" />
 <script src="scroll.js"></script>
-<!-- <script src="today.js"></script>  -->
+<script src="boss_calendar.js"></script> 
 
 
 <script>
@@ -266,20 +266,21 @@ document.addEventListener('DOMContentLoaded', function() {
     <footer>
       <span class="circle-icon">
           <!--사장 근무정보 페이지: boss-work.html-->
-          <a href="boss-work.html">
+          
               <img src="work-bar.svg" alt="Work Icon" />
-          </a>
+          
       </span>
       <span class="circle-icon">
         <!-- 사장 급여정보 페이지 boss-money.html -->
-        <a href = '사장-급여정보\boss-money.html'>
-          <img src="money-bar.svg" alt="Money Icon" />
-        </a>
+        <button onclick="redirectToPage()"><img src="money-bar.svg" alt="Money Icon" /></button>
+          
+        
       </span>
+      <!-- 사장 홈으로 이동 -->
       <span class="circle-icon">
-        <a href="boss-home\boss-home.html">
-            <img src="home-bar.svg" alt="Home Icon" />
-        </a>
+        <button onclick="redirectToPage1()"><img src="home-bar.svg" alt="Home Icon" /></button>
+            
+        
     </span>
       </span>
       <span class="circle-icon">

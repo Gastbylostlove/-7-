@@ -326,6 +326,8 @@ footer {
     width: 100%;
     max-width: 400px;
     box-sizing: border-box;
+    
+   
 }
 
 .circle-icon {
@@ -337,6 +339,23 @@ footer {
     display: inline-block;
     gap: 10px; /* 7px의 0.8배 */
     transition: opacity 0.15s;
+    
+   
+}
+
+.circle-icon button {
+    font-size: 14.4px; /* 18px의 0.8배 */
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    padding: 2px; /* 2.5px의 0.8배 */
+    margin: 4px; /* 5px의 0.8배 */
+    display: inline-block;
+    gap: 10px; /* 7px의 0.8배 */
+    transition: opacity 0.15s;
+    border: none;
+    background-color: white;
+    
+   
 }
 
 .circle-icon:hover {

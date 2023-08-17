@@ -176,8 +176,9 @@ select {
     opacity: 0.8;
 }
 
-.money-box .text,
-.work-box .text {
+.money-box .text button,
+.work-box .text button
+{
     position: absolute;
     top: 1px;
     left: 40%;
@@ -185,6 +186,8 @@ select {
     text-align: center;
     font-size: 22px;
     font-weight: bold;
+    border: none;
+    background-color: white;
 }
 
 /* 방문하지 않은 링크 */
@@ -226,10 +229,12 @@ a:visited {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
-.선지급-box .text {
+.선지급-box .text button{
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    border: none;
+    background-color: white;
 }
 
 @media all and (max-width: 300px) {

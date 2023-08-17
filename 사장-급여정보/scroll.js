@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
         container.addEventListener('mouseleave', () => {
             isDragging = false;
         });
+   
     });
+
 });
 
