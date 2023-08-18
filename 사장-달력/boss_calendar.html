@@ -9,7 +9,7 @@
 <script src='schedule.html'></script>
 <link rel="stylesheet" href="boss_calnedar_style.css" />
 <script src="scroll.js"></script>
-<!-- <script src="today.js"></script>  -->
+<script src="today.js"></script> 
 
 
 <script>
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <body>
   <div class="app-title">근무정보</div>
 
-  <!--근무자 프로필 -->
+  
   <!-- 근무자 프로필 -->
   <div class="container" data-scrollable>
     <div class="story-container">
@@ -225,24 +225,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <!-- 하단 바 메뉴 -->
   <footer>
+    <!--사장 근무정보: boss_calendar.html-->
     <span class="circle-icon">
-        <!--사장 근무정보 페이지: boss-work.html-->
         <a href="part-timer-work.html">
             <img src="work-bar.svg" alt="Work Icon" />
         </a>
     </span>
-    <span class="circle-icon">
-        <img src="money-bar.svg" alt="Money Icon" />
+
+    <!-- 사장-급여정보 -->
+    <span class="circle-icon">        
+        <button onclick="location.href='../사장-급여정보/boss-money.html'">
+          <img src="money-bar.svg" alt="Money Icon" />
+        </button>
     </span>
+
+
+    <!--사장-홈: boss-home.html-->
     <span class="circle-icon">
-        <!--사장 홈화면 페이지: boss-home.html-->
-        <a href="part-timer-home.html"> 
-            <img src="home-bar.svg" alt="Home Icon" />
-        </a>
-    </span>
+        <button onclick="location.href='../사장-홈/boss-home.html'">
+          <img src="home-bar.svg" alt="Home Icon" />
+        </button>
+      </span>
+    
+
+
     <span class="circle-icon">
         <img src="setting-bar.svg" alt="Setting Icon" />
     </span>
-
+    
+  </footer>
+  
 </body>
 </html>
