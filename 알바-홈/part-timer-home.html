@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>part-timer-home</title>
+    <link rel="stylesheet" href="part-timer-home.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script src="js/option.js"></script>
+    <!-- <script src="part-timer-home.js"></script> -->
+  </head>
+
+  <body>
+    <div class="app-title">S O H O</div>
+
+    <div class="내용">
+      <div class="greeting">O O O 님 안녕하세요</div>
+
+      <div class="calendar">
+        <div class="month">◀ 23.07 ▶</div>
+        <div class="day">일</div>
+        <div class="day">월</div>
+        <div class="day">화</div>
+        <div class="day">수</div>
+        <div class="day">목</div>
+        <div class="day">금</div>
+        <div class="day">토</div>
+      </div>
+
+      <!-- 출근 퇴근 -->
+      <div class="출퇴근">
+        <div class="select-box">
+          <select id="business">
+            <option value="과외">과외</option>
+            <option value="카페">카페</option>
+            <option value="식당">식당</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="실시간근무현황">
+        <div class="현황">
+          <img src="실시간현황.svg" alt="실시간" />
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="work-box">
+          <div class="text">
+            <!-- <button onclick="part_calendar()">근무정보</button> -->
+            <button onclick="location.href='../알바-달력/part_calendar.html'">
+              근무정보
+            </button>
+          </div>
+          <div class="icon">
+            <img src="work-icon.svg" alt="Icon" />
+          </div>
+        </div>
+
+        <div class="money-box">
+          <div class="text">
+            <!-- <button onclick="pay()">급여정보</button> -->
+            <button
+              onclick="location.href='../알바-급여정보/part-timer-money.html'"
+            >
+              급여정보
+            </button>
+          </div>
+          <div class="icon">
+            <img src="money-icon.svg" alt="Icon" />
+          </div>
+        </div>
+      </div>
+
+      <div class="선지급-box">
+        <div class="text">
+          <!-- <button onclick="salary_loan()">선지급 관리</button> -->
+          <button onclick="location.href='../알바-선지급관리/salary_loan.html'">
+            선지급 관리
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
