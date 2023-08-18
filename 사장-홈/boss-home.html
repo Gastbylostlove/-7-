@@ -14,20 +14,29 @@
   </head>
 
   <body>
-    <div class="app-title">S O H O</div>
-
+    <div class="app-title">
+      <div class="logo">
+        <img src="logo.svg" alt="Icon" />
+      </div>
+      <div class="title">SSOK</div>
+    </div>
+  
     <div class="내용">
-      <div class="greeting">O O O 사장님 안녕하세요</div>
+      <div class="greeting"><span class="name-text">홍길동</span> 사장님 안녕하세요 :)</div>
+
+      <div class="calendar">
+          <img src="weekcal.svg" alt="Icon" />
+      </div>
 
       <div class="work">
         <table class="tbl">
           <tbody>
             <tr>
-              <td colspan="3">오늘 근무인원 <span>5명</span></td>
-              <td colspan="3">총 원 <span>14명</span></td>
+              <td colspan="3">근무인원 <span>5명</span></td>
+              <td colspan="3">총원 <span>14명</span></td>
             </tr>
             <tr>
-              <td colspan="2">정상출근<span>2명</span></td>
+              <td colspan="2">출근<span>2명</span></td>
               <td colspan="2">지각 <span>0명</span></td>
               <td colspan="2">미출근 <span>3명</span></td>
             </tr>
@@ -35,23 +44,10 @@
         </table>
       </div>
 
-      <div class="calendar">
-        <div class="month">◀ 23.07 ▶</div>
-        <div class="day">일</div>
-        <div class="day">월</div>
-        <div class="day">화</div>
-        <div class="day">수</div>
-        <div class="day">목</div>
-        <div class="day">금</div>
-        <div class="day">토</div>
-      </div>
-
       <div class="main">
         <div class="work-box">
           <div class="text">
-            
-            <button
-              onclick="location.href='../사장-근무정보/boss_calendar.html'">
+            <button onclick="location.href='../알바-달력/part_calendar.html'">
               근무정보
             </button>
           </div>
@@ -62,8 +58,9 @@
 
         <div class="money-box">
           <div class="text">
-            
-            <button onclick="location.href='../사장-급여정보/boss-money.html'">
+            <button
+              onclick="location.href='../알바-급여정보/part-timer-money.html'"
+            >
               급여정보
             </button>
           </div>
@@ -72,6 +69,14 @@
           </div>
         </div>
       </div>
+
+      <div class="분석리포트-box">
+        <div class="text">
+            분석 리포트
+        </div>
+      </div>
+
+
     </div>
   </body>
 </html>
