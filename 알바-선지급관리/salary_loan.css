@@ -1,280 +1,297 @@
 body {
-    width: 400px;
-    height: 620px;
-    margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    display: flex;
-    /* Flex 컨테이너로 설정 */
-    flex-direction: column;
-    /* 세로 방향으로 정렬 */
-    justify-content: center;
-    /* 수직 가운데 정렬 */
-    align-items: center;
-    /* 수평 가운데 정렬 */
-    box-sizing: border-box;
+  width: 400px;
+  height: 620px;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  /* Flex 컨테이너로 설정 */
+  flex-direction: column;
+  /* 세로 방향으로 정렬 */
+  justify-content: center;
+  /* 수직 가운데 정렬 */
+  align-items: center;
+  /* 수평 가운데 정렬 */
+  box-sizing: border-box;
 }
 
 .container {
-    width: 100%;
-    /* 가로 너비 100%로 설정 */
-    height: 100%;
-    /* 세로 높이 100%로 설정 */
+  width: 100%;
+  /* 가로 너비 100%로 설정 */
+  height: 100%;
+  /* 세로 높이 100%로 설정 */
 }
 /*상단바*/
 .상단바 {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    width: 100%;
-    max-width: 400px;
-    background-color: #635BFF;
-    margin: 0;
-    height: 56.4px;
-    /* 높이 추가 */
-    box-sizing: border-box;
+  display: flex; /* 컨테이너 내 아이템을 플렉스 아이템으로 배치 */
+    align-items: center; /* 수직 가운데 정렬 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%; /* 전체 너비 */
+    max-width: 400px; /* 최대 너비를 400px로 제한 */
+    background-color: white;
+    color: black;
+    margin: 0; /* 마진 제거 */
+    box-sizing: border-box; /* 내용과 패딩을 너비에 포함 */
+    transition: color 0.3s;
+    
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 속성 추가 */
+    
 }
 
 .상단바 .화살표 {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .상단바 .화살표 img {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .상단바 .화살표 button {
-    background-color: #635bff;
-    border: none;
-    padding: 0;
-    /* 버튼 내부 패딩 제거 */
+  background-color: white;
+  border: none;
+  padding: 0;
+  /* 버튼 내부 패딩 제거 */
 }
 
 .상단바 .title {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: bold;
-    flex-grow: 1;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  flex-grow: 1;
 }
 
 .available_amount {
-    box-sizing: border-box;
-    justify-content: space-between; /* 양쪽에 20px 마진을 주기 위해 */
-    align-items: center;
-    margin: 20px; /* 상하 20px, 좌우 20px 마진을 추가 */
-    margin-bottom: 10px;
-    width: calc(100% - 40px); /* 양 옆 여백을 빼줌 */
-    padding: 20px;
-    max-width: 400px;
-    box-sizing: border-box;
-    border-radius: 35px;
-    background-color: #F0F0F0;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  justify-content: space-between; /* 양쪽에 20px 마진을 주기 위해 */
+  align-items: center;
+  margin: 20px; /* 상하 20px, 좌우 20px 마진을 추가 */
+  margin-bottom: 10px;
+  width: calc(100% - 40px); /* 양 옆 여백을 빼줌 */
+  padding: 20px;
+  max-width: 400px;
+  box-sizing: border-box;
+  border-radius: 35px;
+  background-color: white;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
 }
 
 .신청내역 {
-    text-align: right;
-    margin-right: 25px;
-
-    font-size: 15px;
-    color: #384141;
-    margin-bottom: 10px;
-
+  text-align: left;
+  margin-right: 25px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #384141;
+  margin-bottom: 10px;
+  margin-left: 45px;
 }
 
 /* 선지급 가능금액 */
 .text_금액 {
-    text-align: left;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    padding: 5px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  padding: 5px;
 }
 
 .금액 {
-    text-align: center;
-    font-size: 35px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    padding: 2px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  padding: 2px;
 }
-
 
 /* progress bar */
 /* 기본 스타일 제거 */
 .progress {
-    -webkit-appearance: none;
-    appearance: none;
-    border: none;
-    width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  width: 100%;
 }
 /* 커스텀 스타일 적용 */
 .progress::-webkit-progress-bar {
-    background-color: #ffffff;
-    border-radius: 10px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  height: 25px;
 }
 .progress::-webkit-progress-value {
-    background-color: #756de9;
-    border-radius: 10px;
+  background-color: #a8b1fe;
+  border-radius: 8px;
 }
 
 /* 신청금액 입력받는 부분 */
 .신청금액,
 .checkbox {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-    box-sizing: border-box;
-    margin: 0 auto; /* 중앙 정렬을 위한 margin 설정 */
-    border-radius: 10px;
-    margin-bottom: 10px; /* 요소 사이 간격 조절 */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  margin: 0 auto; /* 중앙 정렬을 위한 margin 설정 */
+  border-radius: 10px;
+  margin-bottom: 10px; /* 요소 사이 간격 조절 */
 }
 
 .신청금액 {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
-.checkbox select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
+.checkbox select,
+.신청금액 {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #6f7dff;
 }
 
 .input_금액 {
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 .input_금액 input {
-    text-align: center; /* 마우스 커서 가운데 정렬 */
+  text-align: center; /* 마우스 커서 가운데 정렬 */
 
-    border: none; /* 입력 필드 테두리 제거 */
-    outline: none; /* 입력 필드 포커스 효과 제거 */
+  border: none; /* 입력 필드 테두리 제거 */
+  outline: none; /* 입력 필드 포커스 효과 제거 */
 }
 
 .입력::placeholder {
-    text-align: center; /* placeholder 내용 가운데 정렬 */
+  text-align: center; /* placeholder 내용 가운데 정렬 */
 }
 
 .입력 {
-    display: flexbox;
-    border-radius: 20px;
-    padding: 10px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flexbox;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: white;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
 }
 
+.신청금액 {
+  text-align: center;
+  font-size: 18px; /* 글자 크기 줄임 */
+  width: calc(100% - 120px); /* 양 옆 여백을 빼줌 */
+  margin: 0 60px; /* 양 옆 여백 조정 */
+  padding: 8px; /* 패딩 추가하여 크기 조절 */
+  border: 2px solid #6f7dff;
+  /* border-radius: 10px; 테두리 둥글게 */
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
 
-/* 사업장 선택 */
 /* 사업장 선택 */
 .사업장선택 {
-    text-align: center;
-    font-size: 18px; /* 글자 크기 줄임 */
-    width: calc(100% - 120px); /* 양 옆 여백을 빼줌 */
-    margin: 0 60px; /* 양 옆 여백 조정 */
-    padding: 8px; /* 패딩 추가하여 크기 조절 */
-    border: 1px solid black;
-    border-radius: 20px; /* 테두리 둥글게 */
+  text-align: center;
+  font-size: 18px; /* 글자 크기 줄임 */
+  width: calc(100% - 120px); /* 양 옆 여백을 빼줌 */
+  margin: 0 60px; /* 양 옆 여백 조정 */
+  padding: 8px; /* 패딩 추가하여 크기 조절 */
+  border: 1px solid black;
+  border-radius: 20px; /* 테두리 둥글게 */
+  height: 50px;
 }
-
 
 /* 신청하기 버튼 */
 .신청버튼 {
-    display: flex;
-    padding: 25px;
-    justify-content: center;
+  display: flex;
+  padding: 25px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .저장-box {
-    display: flex;
-    width: 160px;
-    height: 40px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    background-color: #756de9;
-    padding: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  width: 160px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #f7d57f;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .저장-box:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 .저장-box .text button {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    color: #ffffff;
-    background-color: #756de9;
-    border: none;
+  font-size: 20px;
+  /* font-weight: bold; */
+  text-align: center;
+  color: black;
+  background-color: #f7d57f;
+  border: none;
 }
 
 /* 하단 네비게이션 바 아이콘 */
 
 footer {
-    padding: 2.5px;
-    text-align: center;
-    border-radius: 17.5px;
-    /* display: grid; */
-    display: grid; /* Flex 컨테이너로 설정 */
-    justify-content: center; /* 수평 가운데 정렬 */
-    align-items: center; /* 수직 가운데 정렬 */
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 400px;
-    box-sizing: border-box;
-    width: calc(100% - 40px); /* 양 옆 여백을 빼줌 */
-    margin: 0 20px; /* 양 옆 여백 조정 */
-    margin-top: 14px;
-
+  padding: 2.5px;
+  text-align: center;
+  border-radius: 17.5px;
+  /* display: grid; */
+  display: grid; /* Flex 컨테이너로 설정 */
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  width: calc(100% - 40px); /* 양 옆 여백을 빼줌 */
+  margin: 0 20px; /* 양 옆 여백 조정 */
+  margin-top: 14px;
 }
 
 .circle-icon {
-    font-size: 14.4px; /* 18px의 0.8배 */
-    color: rgb(0, 0, 0);
-    border-radius: 50%;
-    padding: 2px; /* 2.5px의 0.8배 */
-    margin: 4px; /* 5px의 0.8배 */
-    display: inline-block;
-    gap: 10px; /* 7px의 0.8배 */
-    transition: opacity 0.15s;
+  font-size: 14.4px; /* 18px의 0.8배 */
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 2px; /* 2.5px의 0.8배 */
+  margin: 4px; /* 5px의 0.8배 */
+  display: inline-block;
+  gap: 10px; /* 7px의 0.8배 */
+  transition: opacity 0.15s;
 }
 .circle-icon button {
-    font-size: 14.4px; /* 18px의 0.8배 */
-    color: rgb(0, 0, 0);
-    border-radius: 50%;
-    padding: 2px; /* 2.5px의 0.8배 */
-    margin: 4px; /* 5px의 0.8배 */
-    display: inline-block;
-    gap: 10px; /* 7px의 0.8배 */
-    transition: opacity 0.15s;
-    background-color: white;
-    border: none;
+  font-size: 14.4px; /* 18px의 0.8배 */
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 2px; /* 2.5px의 0.8배 */
+  margin: 4px; /* 5px의 0.8배 */
+  display: inline-block;
+  gap: 10px; /* 7px의 0.8배 */
+  transition: opacity 0.15s;
+  background-color: white;
+  border: none;
 }
 
-
-
 .circle-icon:hover {
-    transform: scale(1.05);
-    opacity: 0.2;
+  transform: scale(1.05);
+  opacity: 0.2;
 }
 
 /* 웹 페이지 규격 */
 
 @media all and (max-width: 300px) {
-    .main {
-        grid-template-columns: 1fr;
-    }
+  .main {
+    grid-template-columns: 1fr;
+  }
 }
