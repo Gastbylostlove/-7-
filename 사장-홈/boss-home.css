@@ -15,31 +15,49 @@ body {
 }
 
 .app-title {
+    display: flex; /* 컨테이너 내 아이템을 플렉스 아이템으로 배치 */
+    align-items: center; /* 수직 가운데 정렬 */
+    justify-content: center; /* 수평 가운데 정렬 */
     text-align: center;
-    font-size: 22.5px;
+    font-size: 24px;
     font-weight: bold;
-    padding: 15px;
+    padding: 12px;
     width: 100%; /* 전체 너비 */
     max-width: 400px; /* 최대 너비를 400px로 제한 */
-    background-color: #635BFF;
+    background-color: #c9d1fc;
     color: #ffffff;
     margin: 0; /* 마진 제거 */
     box-sizing: border-box; /* 내용과 패딩을 너비에 포함 */
+    transition: color 0.3s; /* 컬러 변화 트랜지션 추가 */
 }
 
 .app-title:hover {
     color: black;
 }
 
+.app-title .logo {
+    margin-right: 10px; /* 로고와 제목 간격 설정 */
+}
+
+.app-title .logo img {
+    width: 30px; /* 로고 이미지 크기 설정 */
+    height: 30px;
+}
+
+
 .greeting {
-    text-align: left;
-    font-size: 22.5px;
+    text-align: center;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 15px;
-    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 5px;
     padding: 2.5px;
     width: 100%; /* 전체 너비 */
     max-width: 400px; /* 최대 너비를 400px로 제한 */
+}
+
+.name-text {
+    color: #635BFF;
 }
 
 /*둥근표*/
@@ -56,11 +74,10 @@ table {
     width: 400px;
 }
 
-
 .work {
     padding: 6px; 
     border-radius: 30px; 
-    background-color: #ECECEA;
+    background-color: #F0F0F0;
     box-shadow: 0 2.5px 15px rgba(0, 0, 0, 0.4);
     width: 100%; /* 전체 너비 */
     max-width: 400px; /* 최대 너비를 400px로 제한 */
@@ -102,61 +119,34 @@ table {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-
 /*달력*/
 .calendar {
-    width: 100%; /* 전체 너비 */
-    max-width: 400px; /* 최대 너비를 400px로 제한 */
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-    margin-top: 17.5px;
-    margin-bottom: 10px;
-
-    border-radius: 30px;
-    background-color: #ffffff;
-    height: 175px;
-    font-size: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-    display: grid;
-    justify-self: center;
-    grid-template-columns: 1fr repeat(6, 1fr);
-    grid-template-rows: auto;
-    border: 0.5px solid #ddd;
-    padding: 5px;
+    width: 90%;
+    margin-bottom: 7px;
 }
 
-.month {
-    grid-column: 4;
-    font-size: 10px;
-    font-weight: bold;
-    white-space: nowrap;
-}
 
-.day {
-    grid-row: 2;
-    border-bottom: 1.5px solid #ddd;
-}
-
-/*급여, 근무 박스*/
+/*급여,근무,분석 리포트 박스*/
 .main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 0.5fr));
-    gap: 20px;
-    width: 100%; /* 전체 너비 */
-    max-width: 400px; /* 최대 너비를 400px로 제한 */
+    gap: 15px;
+    width: 100%;
+    /* 전체 너비 */
+    max-width: 400px;
+    /* 최대 너비를 400px로 제한 */
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .work-box,
 .money-box {
     border-radius: 35px;
     background-color: #ffffff;
-    padding: 75px;
+    padding: 70px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     transition: transform 0.15s, box-shadow 0.15s;
@@ -164,15 +154,16 @@ table {
 
 .work-box:hover,
 .money-box:hover {
-    transform: scale(1.02); 
+    transform: scale(1.02);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-.money-box .icon img, .work-box .icon img {
-    width: 100px;
-    height: 100px;
+.money-box .icon img,
+.work-box .icon img {
+    width: 90px;
+    height: 90px;
     position: absolute;
-    top: 50px;
+    top: 45px;
     left: 25px;
     transition: transform 0.15s, box-shadow 0.15s
 }
@@ -183,26 +174,64 @@ table {
 }
 
 .money-box .text button,
-.work-box .text button{
+.work-box .text button
+{
     position: absolute;
-    top: 15px;
-    left: 35px;
-    font-size: 22.5px;
+    top: 14px;
+    left: 40%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 22px;
     font-weight: bold;
-    background-color: white; /* 배경색을 하얀색으로 설정 */
-    border: none; /* 테두리 없애기 */
+    border: none;
+    background-color: white;
 }
 
 /* 방문하지 않은 링크 */
 a:link {
-    color: black; /* 링크의 색상을 검정색으로 설정 */
-    text-decoration: none; /* 밑줄 제거 */
+    color: black;
+    /* 링크의 색상을 검정색으로 설정 */
+    text-decoration: none;
+    /* 밑줄 제거 */
 }
 
 /* 방문한 링크 */
 a:visited {
-    color: black; /* 링크의 색상을 검정색으로 설정 */
-    text-decoration: none; /* 밑줄 제거 */
+    color: black;
+    /* 링크의 색상을 검정색으로 설정 */
+    text-decoration: none;
+    /* 밑줄 제거 */
+}
+
+/*분석리포트*/
+.분석리포트-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    background-color: #ffffff;
+    padding: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* 가로 너비 100% */
+    max-width: 400px; /* 최대 너비 400px로 제한 */
+    height: 60px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+
+.분석리포트-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.분석리포트-box .text {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    background-color: white;
 }
 
 
