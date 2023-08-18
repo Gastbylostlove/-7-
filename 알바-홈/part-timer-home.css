@@ -20,83 +20,58 @@ body {
 }
 
 .app-title {
+    display: flex; /* 컨테이너 내 아이템을 플렉스 아이템으로 배치 */
+    align-items: center; /* 수직 가운데 정렬 */
+    justify-content: center; /* 수평 가운데 정렬 */
     text-align: center;
-    font-size: 22.5px;
+    font-size: 24px;
     font-weight: bold;
-    padding: 15px;
-    width: 100%;
-    /* 전체 너비 */
-    max-width: 400px;
-    /* 최대 너비를 400px로 제한 */
-    background-color: #635BFF;
+    padding: 12px;
+    width: 100%; /* 전체 너비 */
+    max-width: 400px; /* 최대 너비를 400px로 제한 */
+    background-color: #c9d1fc;
     color: #ffffff;
-    margin: 0;
-    /* 마진 제거 */
-    box-sizing: border-box;
-    /* 내용과 패딩을 너비에 포함 */
+    margin: 0; /* 마진 제거 */
+    box-sizing: border-box; /* 내용과 패딩을 너비에 포함 */
+    transition: color 0.3s; /* 컬러 변화 트랜지션 추가 */
 }
 
 .app-title:hover {
     color: black;
 }
 
+.app-title .logo {
+    margin-right: 10px; /* 로고와 제목 간격 설정 */
+}
+
+.app-title .logo img {
+    width: 30px; /* 로고 이미지 크기 설정 */
+    height: 30px;
+}
+
 .greeting {
-    text-align: left;
-    font-size: 22.5px;
+    text-align: center;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 15px;
-    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 5px;
     padding: 2.5px;
-    width: 100%;
-    /* 전체 너비 */
-    max-width: 400px;
-    /* 최대 너비를 400px로 제한 */
-    box-sizing: border-box; /* 내용과 패딩을 너비에 포함 */
+    width: 100%; /* 전체 너비 */
+    max-width: 400px; /* 최대 너비를 400px로 제한 */
+}
+
+.name-text {
+    color: #635BFF;
 }
 
 /*달력*/
-.calendar {
-    width: 100%;
-    /* 전체 너비 */
-    height: 110px;
-    max-width: 400px;
-    /* 최대 너비를 400px로 제한 */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    border-radius: 30px;
-    background-color: #ffffff;
-
-    font-size: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-    display: grid;
-    justify-self: center;
-    grid-template-columns: 1fr repeat(6, 1fr);
-    grid-template-rows: auto;
-    border: 0.5px solid #ddd;
-
-}
-
-.month {
-    grid-column: 4;
-    font-size: 20px;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.day {
-    grid-row: 2;
-    border-bottom: 3px solid #ddd;
-}
 
 /*사업장 선택*/
 .출퇴근 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 10px;
 }
 
@@ -141,7 +116,7 @@ select {
     /* 최대 너비를 400px로 제한 */
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-top: 20px;
 }
 
@@ -166,7 +141,7 @@ select {
     width: 90px;
     height: 90px;
     position: absolute;
-    top: 50px;
+    top: 45px;
     left: 25px;
     transition: transform 0.15s, box-shadow 0.15s
 }
@@ -180,11 +155,11 @@ select {
 .work-box .text button
 {
     position: absolute;
-    top: 1px;
+    top: 15px;
     left: 40%;
     transform: translateX(-50%);
     text-align: center;
-    font-size: 22px;
+    font-size: 20.5px;
     font-weight: bold;
     border: none;
     background-color: white;
