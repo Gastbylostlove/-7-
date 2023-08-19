@@ -1,8 +1,8 @@
 body {
     width: 400px;
-    height: 620px;
+    height: 630px;
     margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'S-Core Dream', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     /* Flex 컨테이너로 설정 */
     flex-direction: column;
@@ -16,6 +16,10 @@ body {
     /* 세로스크롤 금지 */
 }
 
+* {
+    font-family: 'S-Core Dream';
+}
+
 /*상단바*/
 .상단바 {
     display: flex;
@@ -23,10 +27,9 @@ body {
     padding: 15px;
     width: 100%;
     max-width: 400px;
-    background-color: #635BFF;
+    background-color: white;
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.3);
     margin: 0;
-    height: 56.4px;
-    /* 높이 추가 */
     box-sizing: border-box;
 }
 
@@ -39,18 +42,17 @@ body {
     height: 20px;
 }
 
-.상단바 .화살표 button {
-    background-color: #635bff;
-    border: none;
-    padding: 0;
-    /* 버튼 내부 패딩 제거 */
-}
-
-.상단바 .title {
-    color: #ffffff;
+.상단바 .moneyinfo {
+    color: black;
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
     flex-grow: 1;
+}
+
+.money-tilte {
+    margin-top: 15px;
+    font-weight: bold;
 }
 
 /* 프로필 */
@@ -86,18 +88,19 @@ body {
     /* 사진과 이름 사이의 간격을 조절 */
     font-weight: 600;
 
+
 }
 
 /* 급여계좌 정보 */
 .bank {
     /* width: 100%;
     max-width: 400px; */
+    border-radius: 20px;
     width: 360px;
     box-sizing: border-box;
-
     padding: 10px;
     text-align: center;
-    background-color: #FFF9C8;
+    background-color: #E0E4F8;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,14 +120,13 @@ body {
     font-size: 14px;
 }
 
-
 .salay {
     width: 360px;
     box-sizing: border-box;
     font-size: 14px;
     padding: 5px;
     text-align: center;
-    background-color: #ECECEA;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -152,11 +154,14 @@ body {
 
 .salay_info {
     width: 360px;
-    height: 400px;
+    height: 380px;
     font-size: 100%;
     text-align: center;
-    background-color: #ffffff;
+    background-color: #F0F0F099;
+    border-radius: 20px;
     display: flex;
+    padding-bottom: 5px;
+    padding-top: 5px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -182,12 +187,12 @@ td {
 }
 
 button {
-    background-color: #635bff;
+    background-color: #E0E4F8C9;
     padding: 4px 10px; /* Adjust padding as needed */
     border: none; /* Remove border */
     border-radius: 8px;
     cursor: pointer;
-    color: white; /* Text color */
+    color: #161616B0; /* Text color */
 }
 
 .black_bg {
