@@ -21,25 +21,18 @@ body {
   height: 100%;
   /* 세로 높이 100%로 설정 */
 }
+
 /*상단바*/
 .상단바 {
-  display: flex; /* 컨테이너 내 아이템을 플렉스 아이템으로 배치 */
-    align-items: center; /* 수직 가운데 정렬 */
-    justify-content: center; /* 수평 가운데 정렬 */
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 12px;
-    width: 100%; /* 전체 너비 */
-    max-width: 400px; /* 최대 너비를 400px로 제한 */
-    background-color: white;
-    color: black;
-    margin: 0; /* 마진 제거 */
-    box-sizing: border-box; /* 내용과 패딩을 너비에 포함 */
-    transition: color 0.3s;
-    
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 속성 추가 */
-    
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .상단바 .화살표 {
@@ -51,18 +44,17 @@ body {
   height: 20px;
 }
 
-.상단바 .화살표 button {
-  background-color: white;
-  border: none;
-  padding: 0;
-  /* 버튼 내부 패딩 제거 */
-}
-
-.상단바 .title {
+.상단바 .moneyinfo {
   color: black;
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
   flex-grow: 1;
+}
+
+.money-tilte {
+  margin-top: 15px;
+  font-weight: bold;
 }
 
 .available_amount {

@@ -25,31 +25,32 @@ body {
 .상단바 {
     display: flex;
     align-items: center;
+  
     padding: 15px;
     width: 100%;
     max-width: 400px;
-    background-color: #635BFF;
+    background-color: white;
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.3);
     margin: 0;
-    height: 56.4px;
-    /* 높이 추가 */
     box-sizing: border-box;
-}
-
-.상단바 .화살표 {
+  }
+  
+  .상단바 .화살표 {
     margin-right: 10px;
-}
-
-.상단바 .화살표 img {
+  }
+  
+  .상단바 .화살표 img {
     width: 20px;
     height: 20px;
-}
-
-.상단바 .화살표 button {
-    background-color: #635bff;
-    border: none;
-    padding: 0;
-    /* 버튼 내부 패딩 제거 */
-}
+  }
+  
+  .상단바 .moneyinfo {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+  }
 
 /* 체크 이미지 */
 .check {
