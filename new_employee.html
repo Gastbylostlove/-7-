@@ -8,20 +8,18 @@
     </head>
     <body>
         <div class="container">
-            <!-- 신규 등록 직원 프로필 사진 -->
-            <div class="container2">
-                <div class="story-container">
-                    <div class="content">
-                        <div class="img-container">
-                            <img
-                                src="https://mblogthumb-phinf.pstatic.net/MjAxNzA4MjJfMjAy/MDAxNTAzMzU1NTMxNzM2.DvMPMvMm_rEJHf_RyZnRwcOV-D1TURoGFTBxf2Sa06Ag.bMt90weg1edrQ5a0GlulLX3f7Pu2-aPMQT-y083DO3cg.JPEG.doghter4our/IMG_0906.jpg?type=w800"
-                                alt=""
-                            />
-                        </div>
-                        
-                    </div>
+            <!-- 프로필 -->
+            <div class="프로필">
+                <div class='box'>
+                    <img class="사진"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQnKWk_1Hfnkizm7nuET-oPvId_DbEE3kk0g&usqp=CAU">
+                </div>
+                <div class='이름'>
+                    김니나 23세 (여)
+                    <br>010-1234-5678
                 </div>
             </div>
+            
             <div class="back">
                 <!-- x 버튼 클릭 이벤트를 삭제 -->
                 <button id="closeModalButton"><p>X</p></button>
@@ -137,8 +135,9 @@
                     </div>
                 </div>
 
-                <!-- 요일 선택 -->
+                <!-- 요일/시간 선택 -->
                 <div class="select_day_text">요일/시간</div>
+                <!--요일 선택-->
                 <div class="checkbox">
                     <select class="daybox">
                         <option value="월">월</option>
@@ -149,24 +148,188 @@
                         <option value="토">토</option>
                         <option value="일">일</option>
                     </select>
-
                     <!-- 시간 선택 -->
                     <div class="select_time">
-                        <input
-                            class="select_specific_time"
-                            type="time"
-                            min="09:00"
-                            max="18:00"
-                            required
-                        />
-                        <span>~</span>
-                        <input
-                            class="select_specific_time"
-                            type="time"
-                            min="09:00"
-                            max="18:00"
-                            required
-                        />
+                        <select class="start_hour">
+                            <option value="hour0">0</option>
+                            <option value="hour1">1</option>
+                            <option value="hour2">2</option>
+                            <option value="hour3">3</option>
+                            <option value="hour4">4</option>
+                            <option value="hour5">5</option>
+                            <option value="hour6">6</option>
+                            <option value="hour7">7</option>
+                            <option value="hour8">8</option>
+                            <option value="hour9">9</option>
+                            <option value="hour10">10</option>
+                            <option value="hour11">11</option>
+                            <option value="hour12">12</option>
+                            <option value="hour13">13</option>
+                            <option value="hour14">14</option>
+                            <option value="hour15">15</option>
+                            <option value="hour16">16</option>
+                            <option value="hour17">17</option>
+                            <option value="hour18">18</option>
+                            <option value="hour19">19</option>
+                            <option value="hour20">20</option>
+                            <option value="hour21">21</option>
+                            <option value="hour22">22</option>
+                            <option value="hour23">23</option>
+                        </select>
+                        <span>:</span>
+                        <select class="start_min">
+                            <option value="min0">0</option>
+                            <option value="min1">1</option>
+                            <option value="min2">2</option>
+                            <option value="min3">3</option>
+                            <option value="min4">4</option>
+                            <option value="min5">5</option>
+                            <option value="min6">6</option>
+                            <option value="min7">7</option>
+                            <option value="min8">8</option>
+                            <option value="min9">9</option>
+                            <option value="min10">10</option>
+                            <option value="min11">11</option>
+                            <option value="min12">12</option>
+                            <option value="min13">13</option>
+                            <option value="min14">14</option>
+                            <option value="min15">15</option>
+                            <option value="min16">16</option>
+                            <option value="min17">17</option>
+                            <option value="min18">18</option>
+                            <option value="min19">19</option>
+                            <option value="min20">20</option>
+                            <option value="min21">21</option>
+                            <option value="min22">22</option>
+                            <option value="min23">23</option>
+                            <option value="min24">24</option>
+                            <option value="min25">25</option>
+                            <option value="min26">26</option>
+                            <option value="min27">27</option>
+                            <option value="min28">28</option>
+                            <option value="min29">29</option>
+                            <option value="min30">30</option>
+                            <option value="min31">31</option>
+                            <option value="min32">32</option>
+                            <option value="min33">33</option>
+                            <option value="min34">34</option>
+                            <option value="min35">35</option>
+                            <option value="min36">36</option>
+                            <option value="min37">37</option>
+                            <option value="min38">38</option>
+                            <option value="min39">39</option>
+                            <option value="min40">40</option>
+                            <option value="min41">41</option>
+                            <option value="min42">42</option>
+                            <option value="min43">43</option>
+                            <option value="min44">44</option>
+                            <option value="min45">45</option>
+                            <option value="min46">46</option>
+                            <option value="min47">47</option>
+                            <option value="min48">48</option>
+                            <option value="min49">49</option>
+                            <option value="min50">50</option>
+                            <option value="min51">51</option>
+                            <option value="min52">52</option>
+                            <option value="min53">53</option>
+                            <option value="min54">54</option>
+                            <option value="min55">55</option>
+                            <option value="min56">56</option>
+                            <option value="min57">57</option>
+                            <option value="min58">58</option>
+                            <option value="min59">59</option>
+                        </select>
+                        <span> ~ </span>
+                        <br>
+                        <select class="end_hour">
+                            <option value="hour0">0</option>
+                            <option value="hour1">1</option>
+                            <option value="hour2">2</option>
+                            <option value="hour3">3</option>
+                            <option value="hour4">4</option>
+                            <option value="hour5">5</option>
+                            <option value="hour6">6</option>
+                            <option value="hour7">7</option>
+                            <option value="hour8">8</option>
+                            <option value="hour9">9</option>
+                            <option value="hour10">10</option>
+                            <option value="hour11">11</option>
+                            <option value="hour12">12</option>
+                            <option value="hour13">13</option>
+                            <option value="hour14">14</option>
+                            <option value="hour15">15</option>
+                            <option value="hour16">16</option>
+                            <option value="hour17">17</option>
+                            <option value="hour18">18</option>
+                            <option value="hour19">19</option>
+                            <option value="hour20">20</option>
+                            <option value="hour21">21</option>
+                            <option value="hour22">22</option>
+                            <option value="hour23">23</option>
+                        </select>
+                        <span>:</span>
+                        <select class="end_min">
+                            <option value="min0">0</option>
+                            <option value="min1">1</option>
+                            <option value="min2">2</option>
+                            <option value="min3">3</option>
+                            <option value="min4">4</option>
+                            <option value="min5">5</option>
+                            <option value="min6">6</option>
+                            <option value="min7">7</option>
+                            <option value="min8">8</option>
+                            <option value="min9">9</option>
+                            <option value="min10">10</option>
+                            <option value="min11">11</option>
+                            <option value="min12">12</option>
+                            <option value="min13">13</option>
+                            <option value="min14">14</option>
+                            <option value="min15">15</option>
+                            <option value="min16">16</option>
+                            <option value="min17">17</option>
+                            <option value="min18">18</option>
+                            <option value="min19">19</option>
+                            <option value="min20">20</option>
+                            <option value="min21">21</option>
+                            <option value="min22">22</option>
+                            <option value="min23">23</option>
+                            <option value="min24">24</option>
+                            <option value="min25">25</option>
+                            <option value="min26">26</option>
+                            <option value="min27">27</option>
+                            <option value="min28">28</option>
+                            <option value="min29">29</option>
+                            <option value="min30">30</option>
+                            <option value="min31">31</option>
+                            <option value="min32">32</option>
+                            <option value="min33">33</option>
+                            <option value="min34">34</option>
+                            <option value="min35">35</option>
+                            <option value="min36">36</option>
+                            <option value="min37">37</option>
+                            <option value="min38">38</option>
+                            <option value="min39">39</option>
+                            <option value="min40">40</option>
+                            <option value="min41">41</option>
+                            <option value="min42">42</option>
+                            <option value="min43">43</option>
+                            <option value="min44">44</option>
+                            <option value="min45">45</option>
+                            <option value="min46">46</option>
+                            <option value="min47">47</option>
+                            <option value="min48">48</option>
+                            <option value="min49">49</option>
+                            <option value="min50">50</option>
+                            <option value="min51">51</option>
+                            <option value="min52">52</option>
+                            <option value="min53">53</option>
+                            <option value="min54">54</option>
+                            <option value="min55">55</option>
+                            <option value="min56">56</option>
+                            <option value="min57">57</option>
+                            <option value="min58">58</option>
+                            <option value="min59">59</option>
+                        </select>
                     </div>
                 </div>
             </div>
