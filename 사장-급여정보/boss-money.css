@@ -1,6 +1,6 @@
 body {
     width: 400px;
-    height: 620px;
+    height: 650px;
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
@@ -21,6 +21,42 @@ body {
     box-sizing: border-box;
 }
 
+/*상단바*/
+.상단바 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.04);
+    
+    box-sizing: border-box;
+}
+
+.상단바 .화살표 {
+    margin-right: 10px;
+}
+
+.상단바 .화살표 img {
+    width: 20px;
+    height: 20px;
+}
+
+.상단바 .moneyinfo {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.money-tilte {
+    margin-top: 15px;
+    font-weight: bold;
+}
 
 /*인스타 스토리*/
 
@@ -30,14 +66,14 @@ body {
     background-color: white;
     padding: 0.75rem;
     width: 400px; /* 가로 너비 수정 */
-    height: 100px; /* 세로 높이 수정 */
+    height: 120px; /* 세로 높이 수정 */
     box-sizing: border-box;
     display: flex; /* 추가 */
     align-items: center; /* 추가 */
     justify-content: center; /* 추가 */
     -ms-overflow-style: none;
     margin: 0 auto; /* 가운데 정렬을 위한 마진 설정 */
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .story-container {
@@ -47,7 +83,7 @@ body {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 4.2rem;
-    grid-gap: 1.95rem;
+    grid-gap: 1.7rem;
     margin: 0; /* 위 아래 마진 제거 */
 }
 
@@ -69,8 +105,8 @@ body {
 
 .story-container .content .img-container {
     display: inline-block;
-    height: 5rem; /* 3.5rem 대신 5.25rem로 변경 */
-    width: 5rem; /* 3.5rem 대신 5.25rem로 변경 */
+    height: 4.5rem; /* 3.5rem 대신 5.25rem로 변경 */
+    width: 4.5rem; /* 3.5rem 대신 5.25rem로 변경 */
     border-radius: 50%;
     background:
         radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
@@ -165,17 +201,31 @@ body {
     align-items: center;
 }
 
-.plus-minus {
+.plusminus {
     text-align: center;
-    font-size: 6px;
-    font-weight: bold;
-    margin-top: 2.5px;
     align-items: center;
+    display: flex; /* 내용을 수평 가운데 정렬하기 위해 flex 사용 */
+    justify-content: center; /* 수평 가운데 정렬을 위한 추가 스타일 */
+    padding: 3px;
 }
 
+.plus-minus {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
 /*막대그래프*/
+.money_graph {
+    margin-top: 30px;
+}
+.graph_title {
+    font-weight: bold;
+    text-align: center; /* 가운데 정렬 */
+}
+
 .graph {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     font: normal 80%/120% arial, helvetica, sans-serif;
     width: 100%;
 }
@@ -196,7 +246,7 @@ body {
         .graph {
             display: block;
             width: 100%;
-            height: 250px;
+            height: 220px;
         }
 
         .graph caption {
@@ -271,6 +321,11 @@ body {
             text-indent: 0;
         }
 
+        .graph tbody tr {
+            width: 65%; /* 각 막대 셀의 너비를 조절 */
+            margin: 0 17%; /* 각 막대 사이의 양 옆 간격을 조절 */
+        }
+
         .graph tbody th:after {
             content: "";
         }
@@ -278,7 +333,7 @@ body {
         .graph td {
             width: 100%;
             height: 100%;
-            background: #635BFF;
+            background: #D0D7FF;
             border-radius: 0.4em 0.4em 0 0;
             transition: background 0.4s;
         }
@@ -310,58 +365,6 @@ body {
     }
 }
 
-/* 하단 네비게이션 바 아이콘 */
-
-footer {
-    padding: 2.5px;
-    text-align: center;
-    border-radius: 17.5px;
-    /* display: grid; */
-    display: grid; /* Flex 컨테이너로 설정 */
-    justify-content: center; /* 수평 가운데 정렬 */
-    align-items: center; /* 수직 가운데 정렬 */
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 400px;
-    box-sizing: border-box;
-    
-   
-}
-
-.circle-icon {
-    font-size: 14.4px; /* 18px의 0.8배 */
-    color: rgb(0, 0, 0);
-    border-radius: 50%;
-    padding: 2px; /* 2.5px의 0.8배 */
-    margin: 4px; /* 5px의 0.8배 */
-    display: inline-block;
-    gap: 10px; /* 7px의 0.8배 */
-    transition: opacity 0.15s;
-    
-   
-}
-
-.circle-icon button {
-    font-size: 14.4px; /* 18px의 0.8배 */
-    color: rgb(0, 0, 0);
-    border-radius: 50%;
-    padding: 2px; /* 2.5px의 0.8배 */
-    margin: 4px; /* 5px의 0.8배 */
-    display: inline-block;
-    gap: 10px; /* 7px의 0.8배 */
-    transition: opacity 0.15s;
-    border: none;
-    background-color: white;
-    
-   
-}
-
-.circle-icon:hover {
-    transform: scale(1.05);
-    opacity: 0.2;
-}
 
 @media all and (max-width: 300px) {
     .main {
