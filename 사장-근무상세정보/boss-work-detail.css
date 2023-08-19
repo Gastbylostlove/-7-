@@ -1,6 +1,6 @@
 body {
     width: 400px;
-    height: 620px;
+    height: 650px;
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
@@ -19,13 +19,14 @@ body {
 .상단바 {
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
+
     padding: 15px;
     width: 100%;
     max-width: 400px;
     background-color: white;
-    margin: 0;
-    height: 56.4px;
-    /* 높이 추가 */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.04);
+    
     box-sizing: border-box;
 }
 
@@ -38,21 +39,17 @@ body {
     height: 20px;
 }
 
-.상단바 .화살표 button {
-    background-color: #635bff;
-    border: none;
-    padding: 0;
-    /* 버튼 내부 패딩 제거 */
-}
-
-.상단바 .title {
+.상단바 .moneyinfo {
     color: black;
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
     flex-grow: 1;
-    align-items: center;
-    justify-content: center;
+}
 
+.money-tilte {
+    margin-top: 15px;
+    font-weight: bold;
 }
 
 /* 프로필 */
@@ -92,69 +89,33 @@ body {
 
 
 /* 근무 시간 표 */
-.table {
-    display: table;
-}
-
-.date {
-    margin-top: 0; /* Remove default margin */
-    margin-bottom: 5px; /* Add margin to the bottom */
-    font-weight: lighter;
-}
 
 .근무날짜 {
-    background-color: #f0f0f0;
-    padding: 15px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-    display: table-caption;
-    flex-direction: column;
-    align-items: center;
+    background-color: #F0F0F0;
+    border-radius: 20px;
+    width: 360px;
     text-align: center;
-    font-size: 18px;
-    width: 330px;
-}
-
-.heading {
-    display: table-row;
-    font-weight: bold;
-    text-align: center;
-}
-
-.row {
-    display: table-row;
-    justify-content: space-between;
-    padding: 2px 5px; /* 위아래 2px, 좌우 5px */
-    font-size: 16px;
-    font-weight: 550;
-}
-
-.cell {
-    display: table-cell;
-    border: none;
-    border-width: thin;
-    padding-left: 5px;
-    padding-right: 5px;
-    text-align: center;
-}
-
-
-/* 특이사항 */
-/* 테이블 헤더 */
-/* body {
-    background-color: white;
-    margin: 0;
     padding: 0;
-} */
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
 
 .List {
+    width: 350px;
+    padding: 0 3px; /* 좌우 마진을 10px로 설정 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    text-align: center;
     background-color: #e0e4f8; /* 배경 색상 */
     border-radius: 15px; /* 둥근 네모 테두리 설정 */
     border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px;
+
 }
+
 
 ul {
     list-style: none;
@@ -164,9 +125,9 @@ ul {
 li {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
     border-bottom: 1px solid #ccc;
-    padding-bottom: 8px;
+    padding-bottom: 3px;
 }
 
 label {
@@ -177,22 +138,30 @@ label {
 }
 
 .date {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     background-color: #B69DF8;
+    margin-right: 15px;
     color: black;
     text-align: center;
     line-height: 30px;
+    font-size: 14px;
     border-radius: 50%;
     font-weight: bold;
 }
 
+.year-month {
+    margin-top: 7px;
+    font-weight: bold;
+    font-size: 20px;
+
+}
 input[type="checkbox"] {
     order: 2;
     margin-left: 10px;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border: 2px solid #999;
     border-radius: 4px;
     cursor: pointer;
@@ -205,57 +174,19 @@ input[type="checkbox"]:checked {
 }
 
 .edit-button {
-    margin-left: 10px;
-    padding: 4px 8px;
+    text-align: center;
+    padding: 4px 9px;
     background-color: #2D9CDB;
     color: black;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: -10px;
+    margin-bottom: 10px;
 }
 
-
-/* 하단 네비게이션 바 아이콘 */
-
-footer {
-    padding: 2.5px;
-    text-align: center;
-    border-radius: 17.5px;
-    /* display: grid; */
-    display: grid; /* Flex 컨테이너로 설정 */
-    justify-content: center; /* 수평 가운데 정렬 */
-    align-items: center; /* 수직 가운데 정렬 */
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 400px;
-    box-sizing: border-box;
-    width: calc(100% - 40px); /* 양 옆 여백을 빼줌 */
-    margin: 0 20px; /* 양 옆 여백 조정 */
-    margin-top: 14px;
-    margin-bottom: 18px;
-
-}
-
-.circle-icon {
-    font-size: 14.4px; /* 18px의 0.8배 */
-    color: rgb(0, 0, 0);
-    border-radius: 50%;
-    padding: 2px; /* 2.5px의 0.8배 */
-    margin: 4px; /* 5px의 0.8배 */
-    display: inline-block;
-    gap: 10px; /* 7px의 0.8배 */
-    transition: opacity 0.15s;
-}
-
-.circle-icon:hover {
-    transform: scale(1.05);
-    opacity: 0.2;
-}
 
 /* 웹 페이지 규격 */
-
 @media all and (max-width: 300px) {
     .main {
         grid-template-columns: 1fr;
