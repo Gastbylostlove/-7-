@@ -1,6 +1,6 @@
 body {
     width: 400px;
-    height: 620px;
+    height: 650px;
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
@@ -24,9 +24,10 @@ body {
     align-items: center; /* 수직 가운데 정렬 */
     justify-content: center; /* 수평 가운데 정렬 */
     text-align: center;
-    font-size: 24px;
+    font-size: 38px;
     font-weight: bold;
-    padding: 12px;
+    font-family: '12LotteMartHappyBold';
+    padding: 10px;
     width: 100%; /* 전체 너비 */
     max-width: 400px; /* 최대 너비를 400px로 제한 */
     background-color: #c9d1fc;
@@ -40,21 +41,12 @@ body {
     color: black;
 }
 
-.app-title .logo {
-    margin-right: 10px; /* 로고와 제목 간격 설정 */
-}
-
-.app-title .logo img {
-    width: 30px; /* 로고 이미지 크기 설정 */
-    height: 30px;
-}
-
 .greeting {
     text-align: center;
     font-size: 22px;
     font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
     padding: 2.5px;
     width: 100%; /* 전체 너비 */
     max-width: 400px; /* 최대 너비를 400px로 제한 */
@@ -65,6 +57,9 @@ body {
 }
 
 /*달력*/
+.calendar {
+    margin-bottom: 10px;
+}
 
 /*사업장 선택*/
 .출퇴근 {
@@ -85,25 +80,28 @@ select {
     border-radius: 10px;
     border: 1px solid #ccc;
     font-size: 10px;
-    width: 100px;
+    width: 130px;
     max-width: 100%;
     margin: 10px auto;
 }
 
-.실시간근무현황 {
+.현황 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.현황 img {
-    width: 300px;
-    /* 이미지의 가로 너비를 100%로 설정 */
+.현황-사람, .현황-출근, .현황-퇴근 img {
     max-width: 100%;
     /* 이미지 최대 가로 너비 설정 */
-    height: auto;
+    margin-bottom: 4.8px;
     /* 가로 비율에 맞춰 자동으로 높이 조절 */
 }
+
+.실시간근무현황 .현황 img:nth-child(2) {
+    margin-top: -30px; /* 원하는 만큼 조정 */
+  }
+  
 
 /*급여,근무,선지급 박스*/
 .main {
@@ -195,7 +193,7 @@ a:visited {
     max-width: 400px; /* 최대 너비 400px로 제한 */
     height: 60px;
     box-sizing: border-box;
-    margin-bottom: 17px;
+    margin-bottom: 20px;
 }
 
 

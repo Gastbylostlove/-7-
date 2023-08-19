@@ -1,0 +1,103 @@
+body {
+    width: 400px;
+    height: 620px;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: flex-start; /* align to the top */
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.퇴근 {
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px; 
+    padding: 30px; 
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 250px; /* Updated width */
+    height: 350px; /* Updated height */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center using translation */
+    margin: 0; /* Remove margin */
+    background: linear-gradient(to bottom, rgb(200, 180, 230) 0px, transparent 30px); /* 그라디언트 배경 추가 */
+}
+
+
+.back {
+    text-align: right;
+}
+
+.back button{
+    font-size: 20px;
+    background-color: white;
+    border: none;
+    color: black;
+    margin-right: 5px;
+}
+
+.체크_img img {
+    display: grid;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    height: 14vh; 
+}
+
+.name {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    justify-content: center; 
+    margin: 20px 15px 5px 10px;
+}
+
+.complete_message {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    justify-content: center; 
+    margin-bottom: 20px;
+
+}
+.확인 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 10px;
+}
+
+.확인-box {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #FFC32B;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+
+.확인-box:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.확인-box .text button{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    background-color: #FFC32B;
+    border: none;
+}
