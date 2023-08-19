@@ -99,12 +99,11 @@ body {
     width: 360px;
     box-sizing: border-box;
     padding: 10px;
-    text-align: center;
+    /* text-align: center; */
     background-color: #E0E4F8;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     margin-bottom: 10px;
     margin-top: 10px;
     margin-right: 20px; /* 오른쪽에 20px 여백 */
@@ -116,8 +115,22 @@ body {
     font-weight: bold;
 }
 
-.account {
+.account, .시급{
     font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.account-label, .시급-label {
+    text-align: left; /* 왼쪽 정렬 */
+}
+
+.account-number, .시급-금액 {
+    text-align: right; /* 오른쪽 정렬 */
 }
 
 .salay {
@@ -241,6 +254,10 @@ button {
     height: 400px;
     background: #eee;
     z-index: 2;
+}
+
+.modal_wrap, .black_bg {
+    display: none;
 }
 
 .modal_close {
