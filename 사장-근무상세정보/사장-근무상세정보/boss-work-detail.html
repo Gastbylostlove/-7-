@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>boss-work-detail</title>
+        <link rel="stylesheet" href="boss-work-detail.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <!-- 특이사항 추가 및 삭제 기능 -->
+        <script src="memo_add.js"></script>
+
+        <!-- 테이블 꾸미기 -->
+        <style>
+            table {
+                border-style: none;
+            }
+            td {
+                border-style: none;
+            }
+            .memo {
+                background-color: #e0e4f8;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--상단바-->
+        <div class="상단바">
+            <div
+                class="화살표"
+                onclick="location.href='../사장-근무정보/boss_calendar.html'"
+                style="border: none; background: none"
+            >
+                <img src="화살표.svg" alt="화살표" />
+            </div>
+            <div class="moneyinfo">근무상세정보</div>
+            <div class="menu">
+                <img src="menu.svg" alt="menu" />
+            </div>
+        </div>
+
+        <!-- 프로필 -->
+        <div class="프로필">
+            <div class="box">
+                <img src="4.png" alt="" />
+            </div>
+            <div class="이름">
+                김니나 23세 (여)
+                <br />010-1234-5678
+            </div>
+        </div>
+
+        <!-- 근무 날짜  -->
+        <div class="근무날짜">
+            <img src="근무날짜.svg" alt="day" />
+        </div>
+
+        <div class="List">
+            <div class="year-month">2023년 7월</div>
+            <ul id="todoList">
+                <li>
+                    <label>
+                        <input type="checkbox" />
+                        <div class="date">19</div>
+                        출근 11 : 30 - 퇴근 18 : 30
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" />
+                        <div class="date">21</div>
+                        출근 11 : 30 - 퇴근 18 : 30
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" />
+                        <div class="date">23</div>
+                        출근 13 : 00 - 퇴근 19 : 00
+                    </label>
+                </li>
+            </ul>
+            <button class="edit-button" onclick="editSelectedItems()">
+                수정
+            </button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
