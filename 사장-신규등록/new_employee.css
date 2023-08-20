@@ -1,106 +1,91 @@
-body {
-    margin: 0;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    overflow-x: hidden; /* 가로 스크롤 막기 */
-}
-
-body { min-height: 100vh; }
-
-/* 컨테이너의 최대 가로 너비를 화면의 1/3로 설정 */
-.containe1 {
-    /* max-width: 33.33%; */
-    margin: 0 auto;
-    box-sizing: border-box;
-    align-items: center; /* 세로 중앙 정렬 */
-    display: inline-block;
-}
- 
-/* 폰트 */
-.근로자_text, .시급_text, .insurance_text, .select_day_text {
-    text-align: left;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    padding: 5px;
-}
-
-.switch-x-text {
-    font-size: 20px;    
-}
-
-
-/*상단바*/
-.상단바 {
-    padding: 20px;
-    background-color: #635BFF;
-    display: flex;
-    align-items: center; 
-}
-
-.상단바 .화살표 img {
-    margin-right: 20px;
-    width: 50px; /* 이미지 크기 조절 */
-    height: 50px; /* 이미지 크기 조절 */
-}
-.상단바 .화살표 button {
-    background-color: #635BFF;
-    border: none;
-}
-
-.상단바 .title {
-    color: #ffffff;
-    font-size: 40px;
-    font-weight: bold;
-}
-
-/*인스타 스토리*/
-.container2 {
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
- 
+.container {
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px; 
+    padding: 30px; 
     background-color: white;
-    padding: 1rem; 
-    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 380px !important; /* Updated width */
+    height: 610px !important; /* Updated height */
+    position: absolute;
+    top: 40px; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center using translation */
+    margin-top: 280px;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 1);
 }
 
-.story-container {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 5rem;
-    grid-gap: 1.2rem;
-}
-
-
-.story-container .content {
-    display: grid;
-    grid-gap: 0.5rem;
-    margin: 0;
-    text-align: center;
+.back {
+    text-align: right;
     position: relative;
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.2s ease-in;
+    top: -60px; /* 원하는 만큼 위로 올리세요 */
 }
 
+.back button{
+    font-size: 20px;
+    background-color: white;
+  color: black; /* 텍스트 색상 설정 */
+  border: none;
+  margin-right: 5px;
+}
 
-.story-container .content .img-container {
-    display: inline-block;
-    width: 5rem;
-    height: 5rem;
+/* 프로필 */
+.box {
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    background:
-        radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
-        radial-gradient(white 65%, transparent 0),
-        radial-gradient(to top right, orange, deeppink);
+    overflow: hidden;
 }
 
-.story-container .content .img-container img {
-    display: block;
+.프로필 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.사진 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    clip-path: circle(50%);
+    float: left;
+    margin-right: 10px;
+    /* 사진과 이름 사이의 간격을 조절 */
+}
+
+.이름 {
+    float: center;
+    margin-left: 40px;
+    /* 사진과 이름 사이의 간격을 조절 */
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.내용 {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+/* 폰트 */
+.근로자_text,
+.시급_text,
+.보험_text,
+.select_day_text {
+    text-align: left;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: -10px;
+    
+}
+
+.switch-x-text {
+    font-size: 20px;
 }
 
 * {
@@ -109,86 +94,182 @@ body { min-height: 100vh; }
     box-sizing: border-box;
 }
 
-/* radio_group */
-.radio-group {
-    display: block; /* 가로로 정렬 */
+.근로자_유형 {
+    width: 600px;
     
-  }
-  
-  .radio-group label {
-    display: inline-block;
-    margin-right: 200px; /* 라디오 버튼 간격 조절 */
-    
-  }
-
-/* 시급 */
-.salary_input {
-    display: inline-block;
-  border: none; /* 테두리 스타일 설정 */
-  border-radius: 10px; /* 테두리 둥글기 설정 */
-  font-size: 20px; /* 폰트 크기 조절 */
-  /* outline: none; 포커스 시 발생하는 외곽선 제거 */
-  /* display: block; 가로로 정렬 */
-
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-/* 보험 선택 */
+.radio-group {
+    display: flex;
+    align-items: center;
+    width: 420px !important;
+    height: 30px;
+}
+
+/* .radio-group label 내의 텍스트 글자 크기 조정 */
+.radio-group label {
+    font-size: 12px; /* 원하는 크기로 조정 */
+    white-space: nowrap;
+    line-height: 16px;
+    margin: 0 8px;
+    
+}
+
+/* 라디오 버튼 박스의 크기도 조절해주어야 일부 환경에서 올바르게 작동합니다 */
+.radio-group input[type="radio"] {
+    transform: scale(0.8); /* 0.75배로 크기 조정 */
+}
+
+/* 시급 */
+.salary {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center; /* 세로 정렬을 위해 추가 */
+    margin-bottom: 10px;
+}
+
+.시급_text {
+    margin-right: 30px;
+    white-space: nowrap;
+}
+
+.salary_input {
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    background-color: #f2f2f2; /* 배경색 설정 */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); /* 그림자 효과 추가 */
+    padding: 0 7px; /* 좌우 여백 추가 */
+    justify-content: flex-end; /* 오른쪽 정렬 추가 */
+}
+
+.salary_input input {
+    margin: 0;
+    padding: 10px;
+    border: none;
+    background-color: transparent; /* 테두리 없이 배경 투명하게 */
+    outline: none; /* 포커스 시 발생하는 테두리 제거 */
+}
+
+/*보험*/
 .insurance {
     display: block;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 10px; /* 각 열 사이 간격 설정 */
-  }
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
 
+.insurance_row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    /* 각 행 사이 간격 설정 */
+    height: 20px;
+}
+
+.select_insurance {
+    display: flex;
+    align-items: center;
+}
 
 .select_insurance input {
     align-self: flex-start;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border: none; /* 선택적으로 테두리 추가 */
+    border: none;
+    /* 선택적으로 테두리 추가 */
+}
+
+/* 요일시간 선택 */
+.checkbox, .select_time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* 시간 선택 부분에 간격 조절 */
+.select_time select,
+.select_time span {
+    margin-right: 8px; /* 원하는 간격으로 조절 */
+}
+
+/* 요일 선택 */
+.daybox {
+    width: 70px;
+    height: 30px; /* 높이를 15px로 변경 */
+    /* align-self: center; */ /* 세로 가운데 정렬 추가 */
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+    margin-right: 5px;
+    border: none; /* 테두리 제거 */
+    background-color: #E6E4FF; /* 배경색 설정 */
+    border-radius: 10px; /* 더 둥글게 */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); /* 그림자 효과 추가 */
 }
 
 
-.switch1 + label,
-.switch2 + label,
-.switch3 + label,
-.switch4 + label {
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      color: black;
-      cursor: pointer;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 16px;
-      position: relative;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-  }
+.switch-x-text {
+    font-size: 10px;
+}
 
-.switch1 + label::before,
-.switch1 + label::after,
-.switch2 + label::before,
-.switch2 + label::after,
-.switch3 + label::before,
-.switch3 + label::after,
-.switch4 + label::before,
-.switch4 + label::after{
+.switch1+label,
+.switch2+label,
+.switch3+label,
+.switch4+label {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    margin-right: -20px;
+    margin-top : -40px;
+}
+
+.switch1+label::before,
+.switch1+label::after,
+.switch2+label::before,
+.switch2+label::after,
+.switch3+label::before,
+.switch3+label::after,
+.switch4+label::before,
+.switch4+label::after {
     content: '';
-    display: blue;
+    display: #6750A4;
 }
 
-.switch1 + label::before,
-.switch2 + label::before,
-.switch3 + label::before,
-.switch4 + label::before {
+.switch1+label::before,
+.switch2+label::before,
+.switch3+label::before,
+.switch4+label::before {
     background-color: grey;
     border-radius: 500px;
     height: 15px;
@@ -198,10 +279,10 @@ body { min-height: 100vh; }
     width: 25px;
 }
 
-.switch1 + label::after,
-.switch2 + label::after,
-.switch3 + label::after,
-.switch4 + label::after {
+.switch1+label::after,
+.switch2+label::after,
+.switch3+label::after,
+.switch4+label::after {
     background-color: #fff;
     border-radius: 13px;
     box-shadow: 0 3px 1px 0 rgba(37, 34, 71, 0.05), 0 2px 2px 0 rgba(37, 34, 71, 0.1), 0 3px 3px 0 rgba(37, 34, 71, 0.05);
@@ -218,72 +299,74 @@ body { min-height: 100vh; }
 
 
 
-.switch1:checked + label::before,
-.switch2:checked + label::before,
-.switch3:checked + label::before,
-.switch4:checked + label::before {
-    background-color: blue;
+.switch1:checked+label::before,
+.switch2:checked+label::before,
+.switch3:checked+label::before,
+.switch4:checked+label::before {
+    background-color: #6750A4;
 }
 
-.switch1:checked + label::after,
-.switch2:checked + label::after,
-.switch3:checked + label::after,
-.switch4:checked + label::after {
+.switch1:checked+label::after,
+.switch2:checked+label::after,
+.switch3:checked+label::after,
+.switch4:checked+label::after {
     -webkit-transform: translate3d(10px, 0, 0);
     transform: translate3d(10px, 0, 0);
 }
 
 
-/* 요일 선택 */
-.daybox {
-    width: 100px; /* 원하는 너비로 조절 */
-    height: 40px; /* 원하는 높이로 조절 */
-    padding: 5px; /* 내부 여백 설정 */
-    font-size: 20px; /* 폰트 크기 조절 */
-    text-align: center; 
+.근로자_유형,
+.radio-group,
+.select_insurance,
+.checkbox,
+.select_time,
+.저장-box,
+.저장 {
+    width: 100%;
+    max-width: 400px; /* 각 요소들의 최대 너비를 조정 */
+  
 }
 
-/* 시간 선택 */
-.select_time {
-    float: right;
-    margin-right: 100px;
-    align-self: flex-end;
-    
-}
 .select_specific_time {
-    width: 300px; /* 원하는 너비로 조절 */
-    height: 40px; /* 원하는 높이로 조절 */
-    padding: 5px; /* 내부 여백 설정 */
-    font-size: 20px; /* 폰트 크기 조절 */
-    text-align: center; 
+    width: 140px;
+    height: 30px;
+    padding: 5px 10px; /* 좌우 여백을 조정 */
+    font-size: 14px;
+    text-align: center;
+    border: none;
+    background-color: #E6E4FF;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    margin: 0 10px; /* 좌우 여백을 조정 */
 }
-
 
 /* 요일 추가 버튼 */
 .plus_button {
-    fill:#c7ade6;
+    fill: #c7ade6;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-bottom: 10px;
 
 }
 
 .plus_button svg {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     transition: transform 0.1s, box-shadow 0.1s
 }
 
 .plus_button svg:hover {
-    transform: scale(1.03); 
+    transform: scale(1.03);
 }
 
 /* 저장버튼 */
 
 .저장 {
     display: block;
+    width: 290px;
+    margin: 0 auto; /* 가운데 정렬 */
+
     /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-    padding: 60px;
 }
 
 .저장-box {
@@ -292,56 +375,63 @@ body { min-height: 100vh; }
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: #635BFF;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    background: rgba(255, 196, 43, 0.43);
     padding: 5px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s
 }
 
 .저장-box:hover {
-    transform: scale(1.02); 
+    transform: scale(1.02);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
-.저장-box .text button{
-    font-size: 40px;
+.text button {
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
-    color: #ffffff;
-    background-color: #635BFF;
+    color: #000000; /* 검정색 */
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    justify-content: center;
     border: none;
 }
 
-.radio-group, 
- .select_insurance, .checkbox {
+.radio-group,
+.select_insurance,
+.checkbox {
     justify-content: center;
     align-items: center;
-    margin-top: 10px; 
+    margin-top: 10px;
     margin-bottom: 20px;
-    margin-left: 20px; 
-    margin-right: 20px; 
-    border-radius: 20px; 
-    padding: 30px; 
-    background-color: white;
-    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
-}
-.salary_input {
-    
-    justify-content: center;
-    align-items: center;
-    /* margin-top: 10px;  */
-    /* margin-bottom: 20px; */
-    
-    margin-right: 20px; 
-    border-radius: 20px; 
-    padding: 30px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    padding: 30px;
     background-color: white;
     /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
 }
 
+.salary_input {
+
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+    /* margin-bottom: 20px; */
+
+    margin-right: 20px;
+    border-radius: 35px;
+    padding: 30px;
+    background-color: #E6E4FF;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
+}
+
+
 /* 웹 페이지 규격 */
-@media all and (max-height: 30vh) {
-    .상단바, .radio-group {
-        margin: 5px; 
+@media all and (max-width: 300px) {
+    .main {
+        grid-template-columns: 1fr;
     }
 }
