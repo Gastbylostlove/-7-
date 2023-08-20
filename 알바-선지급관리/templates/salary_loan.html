@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>salary_loan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='salary_loan.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!--상단바-->
+      <div class="상단바">
+        <div
+          class="화살표"
+          onclick="location.href='../../알바-홈/part-timer-home.html'"
+          style="border: none; background: none"
+        >
+        
+          <img src="{{ url_for('static', filename='화살표.svg') }}" alt="화살표" />
+
+        </div>
+        <div class="moneyinfo">쏙페이</div>
+        <div class="menu">
+          
+          <img src="{{ url_for('static', filename='menu.svg') }}" alt="menu" />
+          
+        </div>
+      </div>
+
+      <!--선지급 가능금액-->
+      <div class="available_amount">
+        <div class="text_금액">미리받기 가능금액</div>
+        <div class="금액">932,100원</div>
+        <div>
+          <progress class="progress" value="80" max="100" id="jb"></progress>
+        </div>
+      </div>
+
+      <div class="신청내역">{{formatted_date}} 기준</div>
+      <form action="/result" method="post">
+        <!-- 신청금액 -->
+        <div class="신청금액">
+          <div class="input_금액">
+            <input
+              class="입력"
+              name="금액입력"
+              type="number"
+              min="0"
+              step="10"
+              placeholder="신청금액 입력 (원)"
+            />
+          </div>
+        </div>
+
+        <div class="checkbox">
+          <select class="사업장선택" name="사업장선택">
+            <option class="선택">사업장 선택</option>
+            <option class="사업장">한이음 카페</option>
+            <option class="사업장">CGV</option>
+            <option class="사업장">맥도날드</option>
+          </select>
+        </div>
+
+        <!-- 신청하기 버튼 -->
+        <div class="신청버튼">
+          <div class="저장-box">
+            <div class="text">
+              <button onclick="location.href='complete_loan.html'">
+                신청하기
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </body>
+</html>

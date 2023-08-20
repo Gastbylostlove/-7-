@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <title>complete loan</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="complete_loan.css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='complete_loan.css') }}">
     </head>
 
     <body>
@@ -16,17 +16,18 @@
                     onclick="location.href='../알바-선지급관리/salary_loan.html'"
                     style="border: none; background: none"
                 >
-                    <img src="화살표.svg" alt="화살표" />
+                <img src="{{ url_for('static', filename='화살표.svg') }}" alt="화살표" />
                 </div>
                 <div class="moneyinfo">쏙페이</div>
                 <div class="menu">
-                    <img src="menu.svg" alt="menu" />
+                    <img src="{{ url_for('static', filename='menu.svg') }}" alt="menu" />
                 </div>
             </div>
 
             <!-- check img -->
             <div class="check">
-                <img src="체크.svg" alt="체크" />
+                
+                <img src="{{ url_for('static', filename='체크.svg') }}" alt="체크" />
             </div>
 
             <!-- 신청 완료  -->
@@ -38,13 +39,13 @@
             <!-- 선지급 명세 -->
             <div class="선지급명세">
                 <p>입금 계좌<span>신한 123-4567-0000</span></p>
-                <p>신청 날짜<span>2023.07.21 오후 09:05</span></p>
-                <p>신청 금액<span>200,000원</span></p>
-                <p>수수료<span>2,000원</span></p>
+                <p>신청 날짜<span>{{formatted_date}} {{current_time}}</span></p>
+                <p>신청 금액<span>{{input}}원</span></p>
+                <p>수수료<span>{{charge}}원</span></p>
                 <div style="margin-top: 20px; border-top: 1px solid #ccc"></div>
-                <p>지급 금액<span>200,000원</span></p>
-                <p>미리받기 잔액<span>529,130원</span></p>
-                <p>소속<span>한이음 카페</span></p>
+                <p>지급 금액<span>{{loan_amounts}}원</span></p>
+                <p>미리받기 잔액<span>{{remain_limit}}원</span></p>
+                <p>소속<span>{{selected_option}}</span></p>
             </div>
         </div>
     </body>
