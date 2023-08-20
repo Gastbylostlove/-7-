@@ -1,0 +1,168 @@
+.date1{
+
+
+}
+
+/* 나가기 이미지 */
+.close {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  .close button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* 체크 표시 이미지 */
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  }
+  
+  .story-container,
+  .img-container img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* 근무변경 */
+  .container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-weight: bolder;
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+  
+  .내용 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .shop {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .저장 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .저장-box button {
+    background-color: rgba(255, 195, 43, 0.43);
+    border: none;
+    border-radius: 30px;
+    width: 150px;
+    height: 40px;
+  }
+
+  .저장-box text {
+    font-weight: bold;
+    font-family: 's-core dream'; 
+  }
+  
+  /* 사업장 변경 */
+  .change_shop_tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .change_shop {
+    width: 250px;
+    height: 45px;
+    font-size: 22px;
+    font-display: center;
+    font-weight: bolder;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(253, 248, 243);
+  }
+
+  /* 날짜 변경 */
+  .end_hour, 
+  .start_hour,
+  .start_min,
+  .end_min {
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+  }
+  
+  /* 근무자 변경 */
+  .change_person{
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .change-person-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.change_person {
+    margin-right: 10px; /* 옵션 선택 칸과의 간격 조절 */
+}
+
+
+
+  
+  /* 글자 크기 */
+  span {
+    /* font-size: 100%; */
+  }
+  
+  /* 옵션 글자 크기 */
+  option {
+    /* font-size: 100%; */
+  }
+
+/* 시간 선택 */
+.select_time {
+  display: flex;
+  flex-direction: column; /* 세로로 나열하도록 변경 */
+  align-items: center;
+}
+
+.select_time span {
+  margin: 3px 0; /* 위아래 여백을 더 넓힘 */
+}
+
+
+  /* 컨테이너 크기 조정 */
+  body {
+    width: 400px;
+    height: 650px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  

@@ -1,0 +1,101 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>acceptance</title>
+    <link rel="stylesheet" href="승인.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    
+    <div class="승인">
+      <div class="back">
+        <!-- x 버튼 클릭 이벤트를 삭제 -->
+        <button id="closeModalButton"><p>X</p></button>
+      </div>
+    
+      <!-- 종 이미지 -->
+      <div class="bell">
+        <div class="bell_img">
+          <img src="bell.svg" alt="bell" />
+        </div>
+      </div>
+
+      <!-- 텍스트 -->
+      <div class="text">
+        <div class="name">곽두팔님을</div>
+        <div class="complete_message">추가하시겠습니까?</div>
+      </div>
+
+      <!-- 승인 버튼 -->
+      <div class="저장">
+        <div class="저장-box">
+          <div class="text">
+            <button onclick="location.href='new_employee.php'">승 인</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="svg-container">
+        <svg
+          width="81"
+          height="81"
+          viewBox="0 0 81 81"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <rect width="81" height="81" fill="url(#pattern0)" />
+          <defs>
+            <pattern
+              id="pattern0"
+              patternContentUnits="objectBoundingBox"
+              width="1"
+              height="1"
+            >
+              <use
+                xlink:href="#image0_190_903"
+                transform="scale(0.000925926)"
+              />
+            </pattern>
+          </defs>
+        </svg>
+      </div>
+    </div>
+    <div style="position: relative; z-index:99;">
+      
+      </div>  
+    <script>
+      // 모달 요소 가져오기
+      var modal = document.querySelector(".승인");
+
+      // 모달을 열기 위한 함수
+      function openModal() {
+        modal.style.display = "block";
+      }
+
+      // 모달을 닫는 함수
+      function closeModal() {
+        modal.style.display = "none";
+      }
+
+      // 모달 닫기 버튼 클릭 이벤트 설정
+      var closeModalButton = document.getElementById("closeModalButton");
+      closeModalButton.addEventListener("click", function (e) {
+        e.stopPropagation(); // 이벤트 전파 중단
+        closeModal();
+        // 모달을 닫고 boss.php로 이동
+        //window.location.href = "boss.php";
+      });
+
+      // 모달을 닫고 취소하는 함수
+      function cancelModal() {
+        closeModal();
+        // 모달을 닫고 boss.php로 이동
+       // window.location.href = "boss.php";
+      }
+
+ 
+    </script>
+  </body>
+</html>
