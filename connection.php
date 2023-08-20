@@ -1,7 +1,7 @@
 <?php
 $host = "127.0.0.1";
 $username = "root";
-$password = "1234fin!";
+$password = ""; // 보안
 $database = "soho";
 
 $con = mysqli_connect($host, $username, $password, $database);
