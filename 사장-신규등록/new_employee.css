@@ -365,6 +365,7 @@
     display: block;
     width: 290px;
     margin: 0 auto; /* 가운데 정렬 */
+    margin-top: 7px;
 
     /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
 }
@@ -428,6 +429,11 @@
     /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
 }
 
+.selected_values{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* 웹 페이지 규격 */
 @media all and (max-width: 300px) {
