@@ -103,7 +103,17 @@
   </head>
   <body>
     <!-- 페이지 이름 -->
-    <div class="app-title">근무정보</div>
+    <div class="상단바">
+      <div class="화살표" onclick="location.href='../알바-홈/part-timer-home.html'" style="border: none; background: none;">
+        <img src="화살표.svg" alt="화살표" />
+      </div>        
+      <div class="title">근무정보</div>
+      <div class="menu">
+        <img src="menu.svg" alt="menu" />
+      </div>
+    </div>
+   
+      
 
     <!-- 달력 -->
     <div id="calendar"></div>
@@ -120,17 +130,18 @@
     <!-- 오늘자 날짜로 TO DO LIST   -->
     <div class="schedule_list">
       <div class="list-1">
-        <div class="where">과외</div>
-        <div class="time">12:00 - 13:00</div>
+        <div class="time">10:00 - 17:00</div>
+        <div class="where">파워레인저 식당</div>
+
       </div>
-      <div class="list-2">
+      <!-- <div class="list-2">
         <div class="where">O O O 카페</div>
         <div class="time">14:00 - 17 : 00</div>
       </div>
       <div class="list-3">
         <div class="where">O O O 식당</div>
         <div class="time">18:00 - 22:00</div>
-      </div>
+      </div> -->
 
       <!--추가 아이콘-->
       <!-- <div class="plus">
@@ -138,31 +149,8 @@
   </div> -->
     </div>
 
-    <!-- 하단 바 메뉴 -->
-    <footer>
-      <span class="circle-icon">
-        <img src="work-bar.svg" alt="Work Icon" />
-      </span>
-      <!-- 알바-급여정보 페이지 -->
-      <span class="circle-icon">
-        <button
-          onclick="location.href='../알바-급여정보/part-timer-money.html'"
-        >
-          <img src="money-bar.svg" alt="Money Icon" />
-        </button>
-      </span>
-
-      <span class="circle-icon">
-        <!--알바-홈-->
-
-        <button onclick="location.href='../알바-홈/part-timer-home.html'">
-          <img src="home-bar.svg" alt="Home Icon" />
-        </button>
-      </span>
-
-      <span class="circle-icon">
-        <img src="setting-bar.svg" alt="Setting Icon" />
-      </span>
-    </footer>
+   <div class = button>
+    <button>근무변경</button>
+   </div>
   </body>
 </html>
