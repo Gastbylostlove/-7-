@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>new_employee</title>
-        <link rel="stylesheet" href="time_change.css" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-    <body>
-    <div class = main>
+<head>
+    <meta charset="UTF-8" />
+    <title>new_employee</title>
+    <link rel="stylesheet" href="time_change.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <div class=main>
         <!-- 나가기 버튼 -->
-        <div class = close>
+        <div class=close>
             <div class="나가기">
                 <button onclick="goBack()">
                     <img src="x.svg" alt="나가기" />
                 </button>
             </div>
         </div>
-            <!-- 신청완료 사진 -->
-            <div class="container2">
-                <div class="story-container">
-                    <div class="content">
-                        <div class="img-container">
-                            <a href = ""><img
-                                src="check.svg"
-                                alt="신청완료"
-                            />
-                            </a>
-                        </div>
+        <!-- 신청완료 사진 -->
+        <div class="container2">
+            <div class="story-container">
+                <div class="content">
+                    <div class="img-container">
+                        <a href=""><img src="check.svg" alt="신청완료" />
+                        </a>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="container1">
-                    <div class="title">근무변경</div>
-            </div>
-            
-            <div class = 'change_shop_tag'>
+        <div class="container1">
+            <div class="title">근무변경</div>
+        </div>
+
+        <div class='change_shop_tag'>
             <select class="change_shop">
-                    <option value="shop">사업장 변경</option>
-                    <option value="shop1">파워레인저 식당</option>
-                    <option value="shop2">한이음 카페</option>
+                <option value="shop">사업장 변경</option>
+                <option value="shop1">파워레인저 식당</option>
+                <option value="shop2">한이음 카페</option>
             </select>
-            </div>
-            
-            
-            <!-- 근로자 유형 체크 -->
-            <div class="내용">
-
-                <!-- 근무 변경선택 -->
-                <div class="checkbox">
+        </div>
 
 
-                    <!-- 시간 선택 -->
-                    <div class="select_time">
+        <!-- 근로자 유형 체크 -->
+        <div class="내용">
+
+            <!-- 근무 변경선택 -->
+            <div class="checkbox">
+
+
+                <!-- 시간 선택 -->
+                <div class="select_time">
+                    <div class="시작">
                         <select class="start_hour">
                             <option value="hour0">0</option>
                             <option value="hour1">1</option>
@@ -144,6 +144,8 @@
                             <option value="min59">59</option>
                         </select>
                         <span>부터</span>
+                    </div>
+                    <div class="끝">
                         <br>
                         <select class="end_hour">
                             <option value="hour0">0</option>
@@ -235,40 +237,42 @@
                             <option value="min59">59</option>
                         </select>
                         <span>까지</span>
+                    </div>
                     </br>
-                    </div>  
-
-                      
-
                 </div>
+            </div>
+
+            <div class="change-person-container">
                 <select class="change_person">
-                    <option value="change">근무자변경</option>
+                    <option value="change">근무자 변경</option>
                     <option value="change1">이현준</option>
                     <option value="change2">곽두팔</option>
                     <option value="change3">이진규</option>
                     <option value="change4">고태윤</option>
                     <option value="change5">유영곤</option>
-
                 </select>
                 <span>으로 변경합니다.</span>
             </div>
-            <!-- 저장 버튼 -->
-            <div class="저장">
-                <div class="저장-box">
-                    <div class="text">
-                        <button onclick="location.href='승인.html'">
-                            확인
-                        </button>
-                    </div>
+        
+
+        </div>
+        <!-- 저장 버튼 -->
+        <div class="저장">
+            <div class="저장-box">
+                <div class="text">
+                    <button onclick="location.href='../사장-근무정보/boss_calendar.html'">
+                        확인
+                    </button>
                 </div>
             </div>
         </div>
-        <script src="time_change.js"></script>
+    </div>
+    <script src="time_change.js"></script>
     </div>
 
-    </body>
+</body>
 
 
 
-    
+
 </html>
