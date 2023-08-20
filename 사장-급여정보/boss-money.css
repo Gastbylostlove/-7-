@@ -59,7 +59,6 @@ body {
 }
 
 /*인스타 스토리*/
-
 .container {
     overflow-x: hidden;
     overscroll-behavior-x: contain;
