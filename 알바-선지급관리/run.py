@@ -57,6 +57,8 @@ def result():
 
 
 if __name__ == "__main__":
-    run.run('0.0.0.0', port=9001, debug=True)
+    run.run(port=8000, debug=True)
+
+    # '0.0.0.0', port=9001, 
 
 
